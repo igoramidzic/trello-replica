@@ -3,26 +3,34 @@
   <!-- Content container -->
   <div class="row container-fluid">
     <!-- Boards and Search Form -->
-    <div class="left-container col-lg-5 col-md-5 col-sm-5 col-xs-5">
+    <div class="left-container col-lg-5 col-md-5 col-sm-5 col-xs-4">
       <div class="content-holder">
-        <a href="#" class="nav-link boards boards-menu-link"><i class="fa fa-th-large"></i> Boards</a>
+        <a href="#" class="nav-link boards boards-menu-link"><i class="fa fa-th-large"></i> <span class="hidden-xs">Boards</span></a>
       </div>
     </div>
 
     <!-- Logo -->
-    <div class="holder center-container col-lg-2 col-md-2 col-sm-2 col-xs-2">
+    <div class="holder center-container col-lg-2 col-md-2 col-sm-2 col-xs-3">
       <div class="content-holder">
         <a href="/" class="nav-link logo"><img src="img/trello-logo.png" alt=""></a>
       </div>
     </div>
 
-    <!-- Menu, Notifications, and Profile -->
+    <!-- Profile, Notifications, and Menu -->
     <div class="holder right-container col-lg-5 col-md-5 col-sm-5 col-xs-5">
       <div class="content-holder">
         <!-- List of Links -->
         <ul class="nav navbar-nav navbar-right">
-          <!-- Menu Dropdown -->
-          <li class="dropdown">
+
+          <li class="hidden-xs profile">
+            <img class="profile-img img-rounded" src="img/profile-img.png" alt="">
+            <a href="#" class="dropdown-toggle nav-link profile-welcoming boards-menu-link">
+              Hello, Igor!
+            </a>
+          </li>
+
+          <!-- Notifications Dropdown -->
+          <li class="dropdown hidden-xs">
             <a href="#" class="dropdown-toggle nav-link notifs-btn boards-menu-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <i class="fa fa-bell-o"></i>
             </a>
@@ -35,7 +43,7 @@
             </ul>
           </li>
 
-          <!-- Notifications Dropdown -->
+          <!-- Menu Dropdown -->
           <li class="dropdown">
             <a href="#" class="dropdown-toggle nav-link hamburger-menu boards-menu-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <i class="fa fa-bars"></i>
