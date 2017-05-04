@@ -6,7 +6,8 @@ var elixir = require('laravel-elixir')
 // Compile sass into css
 elixir(function (mix) {
   mix.sass([
-    'main.sass'
+    'main-content/main.sass',
+    'main-content/main-navbar.sass'
   ], 'public/css/all.css') // Output path
 })
 

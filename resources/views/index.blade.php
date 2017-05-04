@@ -2,6 +2,10 @@
 
 @section ('main-content')
 
-  @include ('partials.navbar')
+  <div class="main-index">
+    <div class="wrapper">
+      @include ('partials.navbar')
+    </div>
+  </div>
 
 @endsection
