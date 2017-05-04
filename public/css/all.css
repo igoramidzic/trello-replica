@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500");
 @import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Slabo+27px");
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f5f7fb;
   box-sizing: border-box;
@@ -22,6 +26,7 @@ body {
 
 .main-index .wrapper {
   border-radius: 10px;
+  overflow: hidden;
   min-height: 800px;
   width: 100%;
   background-color: #f5f7fb;
@@ -71,35 +76,69 @@ body {
   transition: all .25s;
   border: none;
   box-shadow: 0px 10px 35px -20px rgba(0, 0, 0, 0.5);
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
 }
 
-.main-index .navbar .holder {
-  height: 70px;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  transition: height .25s;
-}
-
-.main-index .navbar .holder .content-holder {
+.main-index .navbar .content-holder {
   width: 100%;
+  height: 70px;
+}
+
+.main-index .navbar .content-holder a {
+  display: inline-block;
+  line-height: 70px;
+}
+
+.main-index .navbar .content-holder .boards-menu-link {
+  padding: 0px 25px;
+  text-decoration: none;
+  transition: all .25s;
+}
+
+.main-index .navbar .content-holder .boards-menu-link:hover {
+  border-color: #b2b3b7;
+  color: #b2b3b7;
+}
+
+.main-index .navbar .content-holder .boards-menu-link:hover .fa-th-large {
+  color: #b2b3b7;
 }
 
 .main-index .navbar .left-container {
-  background-color: #e4a15e;
+  padding-left: 0px;
+}
+
+.main-index .navbar .left-container .boards {
+  color: #b2b3b7;
+}
+
+.main-index .navbar .left-container .boards .fa-th-large {
+  transition: all .25s;
+  color: #d6d6d6;
+  margin-right: 8px;
+  font-size: 22px;
+  position: relative;
+  top: 3px;
 }
 
 .main-index .navbar .center-container {
-  background-color: #c3a0e4;
   text-align: center;
 }
 
 .main-index .navbar .right-container {
-  background-color: #db808b;
+  padding-right: 0px;
   text-align: right;
+}
+
+.main-index .navbar .right-container .hamburger-menu {
+  color: #d6d6d6;
+  border-left: 1px solid #d6d6d6;
+  font-size: 20px;
+  height: 100%;
+}
+
+.main-index .navbar .right-container .notifs-btn {
+  color: #d6d6d6;
+  font-size: 18px;
 }
 
 @media (max-width: 767px) {
