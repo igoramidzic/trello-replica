@@ -11,7 +11,7 @@
     .content-holder
       width: 100%
       height: 70px
-      a
+      .nav-link
         display: inline-block
         line-height: 70px
       .boards-menu-link
@@ -37,16 +37,22 @@
     .center-container
       text-align: center
     .right-container
-      padding-right: 0px
       text-align: right
       .hamburger-menu
         color: $extra-light-text-color
         border-left: 1px solid $extra-light-text-color
         font-size: 20px
         height: 100%
+        background-color: transparent
       .notifs-btn
         color: $extra-light-text-color
         font-size: 18px
+        background-color: transparent
+      // Changes color when dropdown is open
+      .dropdown.open .dropdown-toggle
+        color: $light-text-color
+        background-color: #fff
+        border-color: $light-text-color
 
 
 @media (max-width: 767px)

@@ -83,7 +83,7 @@ body {
   height: 70px;
 }
 
-.main-index .navbar .content-holder a {
+.main-index .navbar .content-holder .nav-link {
   display: inline-block;
   line-height: 70px;
 }
@@ -125,7 +125,6 @@ body {
 }
 
 .main-index .navbar .right-container {
-  padding-right: 0px;
   text-align: right;
 }
 
@@ -134,11 +133,19 @@ body {
   border-left: 1px solid #d6d6d6;
   font-size: 20px;
   height: 100%;
+  background-color: transparent;
 }
 
 .main-index .navbar .right-container .notifs-btn {
   color: #d6d6d6;
   font-size: 18px;
+  background-color: transparent;
+}
+
+.main-index .navbar .right-container .dropdown.open .dropdown-toggle {
+  color: #b2b3b7;
+  background-color: #fff;
+  border-color: #b2b3b7;
 }
 
 @media (max-width: 767px) {
