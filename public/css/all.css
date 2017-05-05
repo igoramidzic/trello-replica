@@ -186,51 +186,46 @@ body {
 @import url("https://fonts.googleapis.com/css?family=Slabo+27px");
 .main-index .items-content {
   padding: 25px 40px 40px 40px;
-  height: 700px;
   transition: padding .25s;
 }
 
 .main-index .items-content .item-holder {
-  margin-bottom: 30px;
+  max-width: 400px;
+  margin: 0px auto 30px;
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) and (min-width: 992px) {
-  .main-index .todo-content {
+  .main-index .items-content {
     padding: 25px 35px 35px 35px;
-    height: 700px;
   }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) and (min-width: 768px) {
-  .main-index .todo-content {
+  .main-index .items-content {
     padding: 25px 35px 35px 35px;
-    height: 700px;
   }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) and (min-width: 480px) {
-  .main-index .todo-content {
+  .main-index .items-content {
     padding: 25px 35px 35px 35px;
-    height: 700px;
   }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) and (min-width: 320px) {
-  .main-index .todo-content {
+  .main-index .items-content {
     padding: 25px 0px 35px 0px;
-    height: 700px;
   }
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  .main-index .todo-content {
+  .main-index .items-content {
     padding: 25px 0px 35px 0px;
-    height: 700px;
   }
 }
 
@@ -261,6 +256,36 @@ body {
 
 .main-index .items-content .user-item:hover {
   box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.5);
+}
+
+.main-index .items-content .user-item .user-thumbnail {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #4687ff;
+  line-height: 70px;
+  text-align: center;
+  background: #dfeaff;
+  margin: 0 auto;
+  margin-top: 20px;
+  cursor: default;
+}
+
+.main-index .items-content .user-item .user-name {
+  margin: 20px 0px;
+  text-align: center;
+}
+
+.main-index .items-content .user-item .user-name .name {
+  margin-bottom: 8px;
+  color: #1f2437;
+  font-weight: 300;
+}
+
+.main-index .items-content .user-item .user-name .username {
+  margin: 0px;
+  color: #b2b3b7;
 }
 
 /*# sourceMappingURL=all.css.map */
