@@ -8,6 +8,7 @@
     -webkit-box-shadow: 0px 10px 35px -10px rgba(0,0,0,0.75)
     -moz-box-shadow: 0px 10px 35px -10px rgba(0,0,0,0.75)
     box-shadow: 0px 10px 35px -20px rgba(0,0,0,0.5)
+    margin: 0px
     .content-holder
       .nav-link
         display: inline-block
@@ -34,9 +35,9 @@
           top: 3px
     .center-container
       text-align: center
-      margin: 0 auto
+      padding: 0px 20px
       img
-        margin: 0 auto
+        max-width: 55px
     .right-container
       padding-right: 0px
       text-align: right
@@ -54,37 +55,20 @@
         background-color: transparent
       .notifs-btn
         color: $extra-light-text-color
-        font-size: 18px
+        font-size: 16px
         background-color: transparent
       .profile
-        padding: 0px
-        .profile-img
-          max-width: 30px
         .profile-welcoming
-          padding: 0px 5px
+          padding: 0px 15px
           font-size: 16px
+          color: $dark-text-color
           &:hover
             color: $primary-color
+          .profile-img
+            max-width: 30px
+            margin-right: 15px
       // Changes color when dropdown is open
       .dropdown.open .dropdown-toggle
         color: $light-text-color
         background-color: #fff
         border-color: $light-text-color
-
-
-@media (max-width: 767px)
-  .main-index
-    .navbar
-      .content
-        height: 70px
-        padding: 0px !important
-        .logo-container
-          .logo
-            font-size: 23px
-            .logo-initials
-              font-size: 25px
-        .contact-link-container
-          .contact-link
-            font-size: 16px
-            padding: 5px 20px
-  padding: 0px !important

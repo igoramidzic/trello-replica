@@ -4,7 +4,8 @@
 
   <div class="main-index">
     <div class="wrapper">
-      @include ('partials.navbar')
+      @include ('partials.main-navbar')
+      @include ('partials.todo-content')
     </div>
   </div>
 

@@ -20,11 +20,11 @@
     <div class="holder right-container col-lg-5 col-md-5 col-sm-5 col-xs-5">
       <div class="content-holder">
         <!-- List of Links -->
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="navbar-nav navbar-right">
 
           <li class="hidden-xs profile">
-            <img class="profile-img img-rounded" src="img/profile-img.png" alt="">
             <a href="#" class="dropdown-toggle nav-link profile-welcoming boards-menu-link">
+              <img class="profile-img img-rounded" src="img/profile-img.png" alt="">
               Hello, Igor!
             </a>
           </li>
