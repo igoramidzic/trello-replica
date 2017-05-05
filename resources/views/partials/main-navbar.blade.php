@@ -5,7 +5,7 @@
     <!-- Boards and Search Form -->
     <div class="left-container col-lg-5 col-md-5 col-sm-5 col-xs-4">
       <div class="content-holder">
-        <a href="#" class="nav-link boards boards-menu-link"><i class="fa fa-th-large"></i> <span class="hidden-xs">Boards</span></a>
+        <a href="/" class="nav-link boards boards-menu-link"><i class="fa fa-th-large"></i> <span class="hidden-xs">Members</span></a>
       </div>
     </div>
 
