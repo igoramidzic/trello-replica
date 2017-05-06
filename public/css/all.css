@@ -271,4 +271,25 @@ body {
   color: #b2b3b7;
 }
 
+.main-index .items-content .user-item .tasksHolder {
+  text-align: center;
+  border-top: 1px solid #d6d6d6;
+  padding: 10px 0px;
+  cursor: default;
+}
+
+.main-index .items-content .user-item .tasksHolder .taskCount {
+  margin: 0px;
+  font-size: 28px;
+  font-weight: 300;
+  color: #1f2437;
+}
+
+.main-index .items-content .user-item .tasksHolder .description {
+  color: #b2b3b7;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0px;
+}
+
 /*# sourceMappingURL=all.css.map */
