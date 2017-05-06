@@ -3,7 +3,7 @@
 .main-index
   .items-content
     .user-item
-      border: 1px solid rgb(233, 233, 233)
+      border: 1px solid $border-color
       background-color: #fff
       -webkit-box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.5)
       -moz-box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.5)
@@ -35,7 +35,8 @@
           color: $light-text-color
       .tasksHolder
         text-align: center
-        border-top: 1px solid $extra-light-text-color
+        border-top: 1px solid $border-color
+        border-bottom: 1px solid $border-color
         padding: 10px 0px
         cursor: default
         .taskCount
@@ -48,3 +49,50 @@
           font-size: 12px
           font-weight: 300
           margin: 0px
+      .linksHolder
+        padding: 0px
+        a
+          padding: 15px 0px
+          text-align: center
+          font-size: 10px
+          text-decoration: none
+          color: $light-text-color
+          letter-spacing: 1px
+          transition: color .25s ease-in-out
+          &:hover
+            color: $primary-color
+          &:first-child
+            border-right: 1px solid $border-color
+          .icon
+            font-size: 15px
+            margin-right: 5px
+            position: relative
+            top: 2px
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) and (min-width : 480px)
+  .main-index
+    .items-content
+      .user-item:hover
+        -webkit-box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.5)
+        -moz-box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.5)
+        box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.5)
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) and (min-width : 320px)
+  .main-index
+    .items-content
+      .user-item:hover
+        -webkit-box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.5)
+        -moz-box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.5)
+        box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.5)
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+  .main-index
+    .items-content
+      .user-item:hover
+        -webkit-box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.5)
+        -moz-box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.5)
+        box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.5)
