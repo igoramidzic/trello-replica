@@ -240,7 +240,7 @@ body {
 }
 
 .main-index .items-content .user-item:hover {
-  box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 30px -7px rgba(0, 0, 0, 0.5);
 }
 
 .main-index .items-content .user-item .user-thumbnail {

@@ -13,7 +13,6 @@ $users = [
 
 <div class="items-content">
   <div class="row">
-    <!-- Loop through all users -->
     @foreach ($users as $user)
       <div class="item-holder col-lg-3 col-md-4 col-sm-6">
         <div class="user-item">
@@ -27,7 +26,7 @@ $users = [
           </div>
           <!-- User's Name Info -->
           <div class="user-name">
-            <h4 class="name">{{ $user["first_name"] }}</h5>
+            <h4 class="name">{{ $user["first_name"] . " " . $user["last_name"] }}</h5>
             <h6 class="username">{{ "@" . $user["username"] }}</h6>
           </div>
           <!-- Number of Tasks -->
