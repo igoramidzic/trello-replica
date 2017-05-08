@@ -11,14 +11,14 @@ class RegisterController extends Controller
 {
     use RegistersUsers;
 
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/members';
 
     public function __construct()
     {
         $this->middleware('guest');
     }
 
-    protected function validator(array $data)
+    protected function validator (array $data)
     {
         return Validator::make($data, [
             'first_name' => 'required|max:255',
@@ -29,7 +29,7 @@ class RegisterController extends Controller
         ]);
     }
 
-    protected function create(array $data)
+    protected function create (array $data)
     {
         return User::create([
             'first_name' => $data['first_name'],

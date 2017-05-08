@@ -2,6 +2,6 @@
 
 @section ('main-content')
 
-  Index page
+  <a href="/members">Members page</a>
 
 @endsection

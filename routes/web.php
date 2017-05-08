@@ -2,13 +2,8 @@
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
-
 // Home
-Route::get('/', function () {
-  $page = 'Todo List Application';
-  return view('index', compact('page'));
-});
+Route::get('/', 'HomeController@index');
 
 // Members INDEX
 Route::get('/members', 'MembersController@index');
