@@ -10,7 +10,7 @@ class MembersController extends Controller
   // Restrict access
   public function __construct()
   {
-      $this->middleware('auth');
+      $this->middleware('auth')->except(['index']);
   }
 
   // Show all members

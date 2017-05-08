@@ -6,6 +6,7 @@
     <div class="left-container col-lg-5 col-md-5 col-sm-5 hidden-xs">
       <div class="content-holder">
         <div href="/" class="nav-item page-title">
+          {{ $page }}
         </div>
       </div>
     </div>
@@ -25,7 +26,7 @@
           <!-- If user is logged in -->
           @if (Auth::guest())
             <li class="profile">
-              <a href="/register" class="dropdown-toggle nav-item nav-link">
+              <a href="/signup" class="dropdown-toggle nav-item nav-link">
                 Signup
               </a>
             </li><!--
@@ -40,13 +41,13 @@
                 <span class="welcome-message hidden-xs">Hello, {{ Auth::user()->first_name }}!</span>
                 <!-- <img class="profile-img img-rounded" src="img/profile-img.png" alt=""> -->
               </a>
-            </li><!--
-            --><li>
-              <a class="nav-item nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            </li>
+            <li>
+              <a class="nav-item nav-link" href="/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                   Logout
               </a>
 
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              <form id="logout-form" action="/logout" method="POST" style="display: none;">
                   {{ csrf_field() }}
               </form>
             </li>

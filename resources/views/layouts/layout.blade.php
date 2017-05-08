@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/all.css">
     <!-- Title -->
+    <title>Trello | {{ $page }}</title>
   </head>
   <body>
     <div class="main-index">

@@ -1,5 +1,5 @@
 <!-- Register Form -->
-<form class="login-register-form" method="POST" action="{{ route('register') }}">
+<form class="login-register-form" method="POST" action="/signup">
 
   {{ csrf_field() }}
 
@@ -8,7 +8,7 @@
     <!-- First name -->
     <div class="col-xs-6 small-input-holder {{ $errors->has('first_name') ? ' has-error' : '' }}">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="First name" name="first_name" value="{{ old('first_name') }}">
+        <input type="text" class="form-control" placeholder="First name" name="first_name" value="{{ old('first_name') }}" autofocus>
       </div>
     </div>
     <!-- Last name -->
@@ -33,16 +33,7 @@
     <span class="input-group-addon"><i class="fa fa-key"></i></span>
     <input type="password" class="form-control" placeholder="password" name="password">
   </div>
-  <!-- Validation errors -->
-  @if (count($errors))
-    <div class="form-group">
-      <div class="alert alert-danger">
-          @foreach ($errors->all() as $error)
-            <p>{{ $error }}</p>
-          @endforeach
-      </div>
-    </div>
-  @endif
+  @include ('partials.errors')
   <!-- Submit button -->
   <div class="submit-button-holder">
     <input type="submit" class="submit-btn pull-right" value="SIGNUP">

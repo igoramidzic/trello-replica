@@ -410,7 +410,7 @@ body {
 }
 
 .main-index .login-register-form .input-group .form-control:focus {
-  border: 1px solid #79a8ff;
+  border: 1px solid #79a8ff !important;
 }
 
 .main-index .login-register-form .submit-button-holder {

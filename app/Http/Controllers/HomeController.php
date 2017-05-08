@@ -8,6 +8,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('index');
+      $page = 'Todo List Application';
+      return view('index', compact('page'));
     }
 }
