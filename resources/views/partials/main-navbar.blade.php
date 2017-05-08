@@ -38,10 +38,10 @@
             <li class="profile">
               <a href="#" class="nav-item nav-link profile-welcoming">
                 <span class="welcome-message hidden-xs">Hello, {{ Auth::user()->first_name }}!</span>
-                <img class="profile-img img-rounded" src="img/profile-img.png" alt="">
+                <!-- <img class="profile-img img-rounded" src="img/profile-img.png" alt=""> -->
               </a>
-            </li>
-            <li>
+            </li><!--
+            --><li>
               <a class="nav-item nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                   Logout
               </a>
