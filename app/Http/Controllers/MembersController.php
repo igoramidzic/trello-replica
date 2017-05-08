@@ -13,7 +13,7 @@ class MembersController extends Controller
     // Get all users
     $users = DB::select("SELECT * FROM users ORDER BY last_name ASC, first_name ASC");
     $page = 'Members';
-    return view('members/login', compact('users', 'page'));
+    return view('members/index', compact('users', 'page'));
   }
 
   // Show one members
@@ -25,14 +25,28 @@ class MembersController extends Controller
     // return view('index', compact('users'));
   }
 
-  // Login
+  // GET Login
   public function login ()
   {
     $page = 'Login';
     return view('members/login', compact('page'));
   }
 
-  // Register
+  // POST Login
+  public function store ()
+  {
+    $first_name = request('first_name');
+    $last_name = request('last_name');
+    $username = request('username');
+    $password = request('password');
+    $color = rand(50, 200) . ", " . rand(50, 200) . ", " . rand(50, 200);
+
+    DB::insert("INSERT INTO users VALUES (NULL, '$first_name', '$last_name', '$username', '$password', '$color', NULL, NOW(), NOW())");
+
+    return redirect('/members');
+  }
+
+  // GET Register
   public function register ()
   {
     $page = 'Signup';

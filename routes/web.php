@@ -2,14 +2,9 @@
 
 // Home
 Route::get('/', function () {
-  return view('index');
+  $page = 'Todo List Application';
+  return view('index', compact('page'));
 });
-
-// Login
-Route::get('/login', 'MembersController@login');
-
-// Register
-Route::get('/signup', 'MembersController@register');
 
 // Members INDEX
 Route::get('/members', 'MembersController@index');
@@ -17,5 +12,14 @@ Route::get('/members', 'MembersController@index');
 // Members SHOW
 Route::get('/members/{id}', 'MembersController@show');
 
-// Tasks SHOW
-Route::get('/members/{id}/tasks', 'MembersController@show');
+// GET login
+Route::get('/login', 'MembersController@login');
+
+// POST login
+Route::post('/login', 'MembersController@create');
+
+// GET Register
+Route::get('/signup', 'MembersController@register');
+
+// POST Register
+Route::post('/members', 'MembersController@store');

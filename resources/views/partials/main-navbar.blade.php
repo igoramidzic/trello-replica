@@ -29,8 +29,8 @@
               <a href="/signup" class="dropdown-toggle nav-item nav-link">
                 Signup
               </a>
-            </li>
-            <li class="profile">
+            </li><!--
+            --><li class="profile">
               <a href="login" class="dropdown-toggle nav-item nav-link emphasis">
                 Login
               </a>
