@@ -4,7 +4,7 @@
       <div class="item-holder col-lg-3 col-md-4 col-sm-6">
         <div class="user-item">
           <!-- User Thumbnail -->
-          <div class='user-thumbnail' style='color: rgb({{ $user->color }}); background-color: rgba({{ $user->color }}, 0.3)' >
+          <div class='user-thumbnail' style='color: rgb(123, 123, 123); background-color: rgba(123, 123, 123, 0.3)' >
             <!-- If user has a profile image, use that instead of initials -->
             @if (false)
                 <!-- <img class='img-responsive img-circle' src={{ $user->img }} /> -->

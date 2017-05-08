@@ -342,12 +342,8 @@ body {
   transition: padding .25s;
 }
 
-.main-index .login-register-form .header {
-  margin: 0px 0px 20px 0px;
-  font-weight: 300;
-  font-size: 33px;
-  text-align: center;
-  color: #b2b3b7;
+.main-index .login-register-form .has-error .input-group-addon, .main-index .login-register-form .has-error .form-control {
+  border-color: #e4432d !important;
 }
 
 .main-index .login-register-form .small-input-holder:first-child {
@@ -382,6 +378,11 @@ body {
 .main-index .login-register-form .input-group .input-group-addon .fa-user {
   top: 14px;
   left: 15px;
+}
+
+.main-index .login-register-form .input-group .input-group-addon .fa-envelope {
+  top: 14px;
+  left: 13px;
 }
 
 .main-index .login-register-form .input-group .input-group-addon .fa-key {

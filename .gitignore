@@ -8,3 +8,4 @@
 Homestead.json
 Homestead.yaml
 /public/bower_components
+.env

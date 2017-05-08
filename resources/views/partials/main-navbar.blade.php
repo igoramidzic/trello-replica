@@ -6,7 +6,6 @@
     <div class="left-container col-lg-5 col-md-5 col-sm-5 hidden-xs">
       <div class="content-holder">
         <div href="/" class="nav-item page-title">
-          {{ $page }}
         </div>
       </div>
     </div>
@@ -24,9 +23,9 @@
         <!-- List of Links -->
         <ul class="navbar-right">
           <!-- If user is logged in -->
-          @if (!isset($user))
+          @if (Auth::guest())
             <li class="profile">
-              <a href="/signup" class="dropdown-toggle nav-item nav-link">
+              <a href="/register" class="dropdown-toggle nav-item nav-link">
                 Signup
               </a>
             </li><!--
@@ -37,10 +36,19 @@
             </li>
           @else
             <li class="profile">
-              <a href="#" class="dropdown-toggle nav-item nav-link profile-welcoming boards-menu-link">
+              <a href="#" class="nav-item nav-link profile-welcoming">
                 <span class="welcome-message hidden-xs">Hello, Igor!</span>
                 <img class="profile-img img-rounded" src="img/profile-img.png" alt="">
               </a>
+            </li>
+            <li>
+              <a class="nav-item nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                  Logout
+              </a>
+
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  {{ csrf_field() }}
+              </form>
             </li>
           @endif
         </ul>

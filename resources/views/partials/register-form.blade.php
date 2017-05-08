@@ -1,33 +1,48 @@
 <!-- Register Form -->
-<form class="login-register-form" action="/members" method="POST">
+<form class="login-register-form" method="POST" action="{{ route('register') }}">
 
   {{ csrf_field() }}
 
   <!-- Names -->
   <div class="row">
     <!-- First name -->
-    <div class="col-xs-6 small-input-holder">
+    <div class="col-xs-6 small-input-holder {{ $errors->has('first_name') ? ' has-error' : '' }}">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="First name" name="first_name">
+        <input type="text" class="form-control" placeholder="First name" name="first_name" value="{{ old('first_name') }}">
       </div>
     </div>
     <!-- Last name -->
-    <div class="col-xs-6 small-input-holder">
+    <div class="col-xs-6 small-input-holder {{ $errors->has('last_name') ? ' has-error' : '' }}">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Last name" name="last_name">
+        <input type="text" class="form-control" placeholder="Last name" name="last_name" value="{{ old('last_name') }}">
       </div>
     </div>
   </div>
   <!-- Username -->
-  <div class="input-group">
+  <div class="input-group {{ $errors->has('username') ? ' has-error' : '' }}">
     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-    <input type="text" class="form-control" placeholder="Username" autocorrect="off" autocapitalize="none" name="username">
+    <input type="text" class="form-control" placeholder="Username" autocorrect="off" autocapitalize="none" name="username" value="{{ old('username') }}">
+  </div>
+  <!-- Email -->
+  <div class="input-group {{ $errors->has('email') ? ' has-error' : '' }}">
+    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+    <input type="text" class="form-control" placeholder="Email" autocorrect="off" autocapitalize="none" name="email" value="{{ old('email') }}">
   </div>
   <!-- Password -->
-  <div class="input-group">
+  <div class="input-group {{ $errors->has('password') ? ' has-error' : '' }}">
     <span class="input-group-addon"><i class="fa fa-key"></i></span>
     <input type="password" class="form-control" placeholder="password" name="password">
   </div>
+  <!-- Validation errors -->
+  @if (count($errors))
+    <div class="form-group">
+      <div class="alert alert-danger">
+          @foreach ($errors->all() as $error)
+            <p>{{ $error }}</p>
+          @endforeach
+      </div>
+    </div>
+  @endif
   <!-- Submit button -->
   <div class="submit-button-holder">
     <input type="submit" class="submit-btn pull-right" value="SIGNUP">
