@@ -13,11 +13,16 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/all.css">
     <!-- Title -->
-    <title>Trello</title>
+    <title>Trello - {{ $page }}</title>
   </head>
   <body>
+    <div class="main-index">
+      <div class="wrapper">
+        @include ('partials.main-navbar')
+        @yield ('main-content')
+      </div>
+    </div>
 
-    @yield ('main-content')
 
   </body>
   <!-- Scripts -->

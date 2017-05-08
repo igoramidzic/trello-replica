@@ -85,46 +85,49 @@ body {
   margin: 0px;
 }
 
-.main-index .navbar .content-holder .nav-link {
+.main-index .navbar .content-holder .nav-item {
   display: inline-block;
   line-height: 70px;
-}
-
-.main-index .navbar .content-holder .boards-menu-link {
   padding: 0px 25px;
   text-decoration: none;
+}
+
+.main-index .navbar .content-holder .nav-link {
   transition: all .25s;
-}
-
-.main-index .navbar .content-holder .boards-menu-link:hover {
-  border-color: #b2b3b7;
   color: #b2b3b7;
 }
 
-.main-index .navbar .content-holder .boards-menu-link:hover .fa-th-large {
+.main-index .navbar .content-holder .nav-link:hover {
+  color: #7d7f86;
+}
+
+.main-index .navbar .content-holder .page-title {
   color: #b2b3b7;
+  cursor: default;
+}
+
+.main-index .navbar .content-holder .emphasis {
+  color: #4687ff;
+}
+
+.main-index .navbar .content-holder .emphasis:hover {
+  color: #004edf;
 }
 
 .main-index .navbar .left-container {
   padding-left: 0px;
 }
 
-.main-index .navbar .left-container .boards {
-  color: #b2b3b7;
-}
-
-.main-index .navbar .left-container .boards .fa-th-large {
-  transition: all .25s;
-  color: #d6d6d6;
-  margin-right: 8px;
-  font-size: 22px;
-  position: relative;
-  top: 3px;
-}
-
 .main-index .navbar .center-container {
   text-align: center;
-  padding: 0px 20px;
+  padding: 0px;
+}
+
+.main-index .navbar .center-container .logo-link {
+  display: inline-block;
+  line-height: 70px;
+  text-decoration: none;
+  padding: 0px 15px;
 }
 
 .main-index .navbar .center-container img {
@@ -146,33 +149,16 @@ body {
   list-style: none;
 }
 
-.main-index .navbar .right-container .hamburger-menu {
-  color: #d6d6d6;
-  border-left: 1px solid #d6d6d6;
-  font-size: 20px;
-  height: 100%;
-  background-color: transparent;
-}
-
-.main-index .navbar .right-container .notifs-btn {
-  color: #d6d6d6;
-  font-size: 16px;
-  background-color: transparent;
-}
-
-.main-index .navbar .right-container .profile .profile-welcoming {
-  padding: 0px 15px;
-  font-size: 16px;
-  color: #1f2437;
-}
-
 .main-index .navbar .right-container .profile .profile-welcoming:hover {
   color: #4687ff;
 }
 
+.main-index .navbar .right-container .profile .profile-welcoming .welcome-message {
+  margin-right: 15px;
+}
+
 .main-index .navbar .right-container .profile .profile-welcoming .profile-img {
   max-width: 30px;
-  margin-right: 15px;
 }
 
 .main-index .navbar .right-container .dropdown.open .dropdown-toggle {
@@ -185,7 +171,7 @@ body {
 @import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Slabo+27px");
 .main-index .items-content {
-  padding: 25px 40px 40px 40px;
+  padding: 30px;
   transition: padding .25s;
 }
 
@@ -340,6 +326,134 @@ body {
 @media only screen and (max-width: 320px) {
   .main-index .items-content .user-item:hover {
     box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500");
+@import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Slabo+27px");
+.main-index .login-register-form {
+  margin: 50px auto;
+  padding: 50px;
+  max-width: 400px;
+  border: 1px solid #e9e9e9;
+  background-color: #fff;
+  box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: padding .25s;
+}
+
+.main-index .login-register-form .header {
+  margin: 0px 0px 20px 0px;
+  font-weight: 300;
+  font-size: 33px;
+  text-align: center;
+  color: #b2b3b7;
+}
+
+.main-index .login-register-form .small-input-holder:first-child {
+  padding-right: 10px;
+}
+
+.main-index .login-register-form .small-input-holder:nth-child(2) {
+  padding-left: 10px;
+}
+
+.main-index .login-register-form .input-group {
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.main-index .login-register-form .input-group .input-group-addon {
+  height: 45px;
+  background-color: #fff;
+  padding: 0px 20px;
+  border: 1px solid #e9e9e9;
+  border-right: none;
+  color: #d6d6d6;
+  font-size: 17px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.main-index .login-register-form .input-group .input-group-addon .fa {
+  position: absolute;
+}
+
+.main-index .login-register-form .input-group .input-group-addon .fa-user {
+  top: 14px;
+  left: 15px;
+}
+
+.main-index .login-register-form .input-group .input-group-addon .fa-key {
+  top: 14px;
+  left: 13px;
+}
+
+.main-index .login-register-form .input-group .form-control {
+  height: 45px;
+  padding: 20px 5px 20px 15px;
+  box-shadow: none;
+  border: 1px solid #e9e9e9;
+  font-size: 15px;
+  font-weight: 300;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.main-index .login-register-form .input-group .form-control::-webkit-input-placeholder {
+  color: #b2b3b7;
+}
+
+.main-index .login-register-form .input-group .form-control:-ms-input-placeholder {
+  color: #b2b3b7;
+}
+
+.main-index .login-register-form .input-group .form-control::placeholder {
+  color: #b2b3b7;
+}
+
+.main-index .login-register-form .input-group .form-control:focus {
+  border: 1px solid #79a8ff;
+}
+
+.main-index .login-register-form .submit-button-holder {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.main-index .login-register-form .submit-button-holder .forgot-password {
+  color: #b2b3b7;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.main-index .login-register-form .submit-button-holder .submit-btn {
+  color: #fff;
+  background-color: #4687ff;
+  box-shadow: 0px 8px 20px -5px #6098ff;
+  border: none;
+  border-radius: 3px;
+  height: 45px;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all .25s;
+  outline: none;
+}
+
+.main-index .login-register-form .submit-button-holder .submit-btn:hover {
+  background-color: #2d76ff;
+  box-shadow: 0px 8px 20px -5px #4687ff;
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 400px) {
+  .main-index .login-register-form {
+    padding: 20px 30px 30px 30px;
   }
 }
 

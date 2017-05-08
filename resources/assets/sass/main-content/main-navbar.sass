@@ -10,32 +10,33 @@
     box-shadow: 0px 10px 35px -20px rgba(0,0,0,0.5)
     margin: 0px
     .content-holder
-      .nav-link
+      .nav-item
         display: inline-block
         line-height: 70px
-      .boards-menu-link
         padding: 0px 25px
         text-decoration: none
+      .nav-link
         transition: all .25s
+        color: $light-text-color
         &:hover
-          border-color: $light-text-color
-          color: $light-text-color
-          .fa-th-large
-            color: $light-text-color
+          color: darken($light-text-color, 20%)
+      .page-title
+        color: $light-text-color
+        cursor: default
+      .emphasis
+        color: $primary-color
+        &:hover
+          color: darken($primary-color, 20%)
     .left-container
       padding-left: 0px
-      .boards
-        color: $light-text-color
-        .fa-th-large
-          transition: all .25s
-          color: $extra-light-text-color
-          margin-right: 8px
-          font-size: 22px
-          position: relative
-          top: 3px
     .center-container
       text-align: center
-      padding: 0px 20px
+      padding: 0px
+      .logo-link
+        display: inline-block
+        line-height: 70px
+        text-decoration: none
+        padding: 0px 15px
       img
         max-width: 55px
     .right-container
@@ -47,26 +48,14 @@
         li
           display: inline-block
           list-style: none
-      .hamburger-menu
-        color: $extra-light-text-color
-        border-left: 1px solid $extra-light-text-color
-        font-size: 20px
-        height: 100%
-        background-color: transparent
-      .notifs-btn
-        color: $extra-light-text-color
-        font-size: 16px
-        background-color: transparent
       .profile
         .profile-welcoming
-          padding: 0px 15px
-          font-size: 16px
-          color: $dark-text-color
           &:hover
             color: $primary-color
+          .welcome-message
+            margin-right: 15px
           .profile-img
             max-width: 30px
-            margin-right: 15px
       // Changes color when dropdown is open
       .dropdown.open .dropdown-toggle
         color: $light-text-color

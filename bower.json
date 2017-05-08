@@ -1,0 +1,23 @@
+{
+  "name": "trello-replica",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Igor Amidzic <amidzicigor@yahoo.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/igoramidzic/trello-replica",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "aos": "^2.1.1",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}

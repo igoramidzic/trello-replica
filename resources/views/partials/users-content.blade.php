@@ -1,7 +1,3 @@
-<?php
-$users = DB::select('SELECT * FROM users');
-?>
-
 <div class="items-content">
   <div class="row">
     @foreach ($users as $user)
@@ -9,12 +5,12 @@ $users = DB::select('SELECT * FROM users');
         <div class="user-item">
           <!-- User Thumbnail -->
           <div class='user-thumbnail' style='color: rgb({{ $user->color }}); background-color: rgba({{ $user->color }}, 0.3)' >
+            <!-- If user has a profile image, use that instead of initials -->
             @if (false)
                 <!-- <img class='img-responsive img-circle' src={{ $user->img }} /> -->
             @else
-                <!-- {{ $user->first_name[0] . $user->last_name[0] }} -->
+                {{ $user->first_name[0] . $user->last_name[0] }}
             @endif
-            {{ $user->first_name[0] . $user->last_name[0] }}
           </div>
           <!-- User's Name Info -->
           <div class="user-name">
@@ -28,8 +24,8 @@ $users = DB::select('SELECT * FROM users');
           </div>
           <!-- User Links -->
           <div class="container-fluid linksHolder">
-            <a class="col-xs-6" href="#"><i class="icon fa fa-check-square-o"></i> CARDS</a>
-            <a class="col-xs-6" href="#"><i class="icon fa fa-user-o"></i> PROFILE</a>
+            <a class="col-xs-6" href="/members/{{ $user->id }}/tasks"><i class="icon fa fa-check-square-o"></i> TASKS</a>
+            <a class="col-xs-6" href="/members/{{ $user->id }}/profile"><i class="icon fa fa-user-o"></i> PROFILE</a>
           </div>
         </div>
       </div>
