@@ -1,10 +1,11 @@
 <div class="items-content">
   <div class="row">
     @foreach ($users as $user)
+
       <div class="item-holder col-lg-3 col-md-4 col-sm-6">
         <div class="user-item">
           <!-- User Thumbnail -->
-          <div class='user-thumbnail' style='color: rgb(123, 123, 123); background-color: rgba(123, 123, 123, 0.3)' >
+          <div class='user-thumbnail' style='color: rgb({{ $user->color }}); background-color: rgba({{ $user->color }}, 0.3)' >
             <!-- If user has a profile image, use that instead of initials -->
             @if (false)
                 <!-- <img class='img-responsive img-circle' src={{ $user->img }} /> -->
@@ -16,6 +17,7 @@
           <div class="user-name">
             <h4 class="name">{{ $user->first_name . " " . $user->last_name }}</h5>
             <h6 class="username">{{ "@" . $user->username }}</h6>
+            <!-- If current iteration is the logged in user -->
           </div>
           <!-- Number of Tasks -->
           <div class="tasksHolder">

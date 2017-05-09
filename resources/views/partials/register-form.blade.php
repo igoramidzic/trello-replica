@@ -8,7 +8,7 @@
     <!-- First name -->
     <div class="col-xs-6 small-input-holder {{ $errors->has('first_name') ? ' has-error' : '' }}">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="First name" name="first_name" value="{{ old('first_name') }}" autofocus>
+        <input type="text" class="form-control" placeholder="First name" name="first_name" value="{{ old('first_name') }}">
       </div>
     </div>
     <!-- Last name -->

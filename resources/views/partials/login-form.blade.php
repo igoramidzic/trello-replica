@@ -5,7 +5,7 @@
   <!-- Username -->
   <div class="input-group">
     <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-    <input type="text" class="form-control" placeholder="Email" autocorrect="off" autocapitalize="none" name="email" value="{{ old('email') }}" autofocus>
+    <input type="text" class="form-control" placeholder="Email" autocorrect="off" autocapitalize="none" name="email" value="{{ old('email') }}">
   </div>
   <!-- Password -->
   <div class="input-group">

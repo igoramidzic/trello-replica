@@ -29,11 +29,21 @@ class RegistrationController extends Controller
       'email' => 'required|email|unique:users',
       'password' => 'required|min:4'
     ]);
+
+    $color = rand(0, 255) . ", " . rand(0, 255) . ", " . rand(0,255);
+
     // Create and save the User
-    $user = User::create(request(['first_name', 'last_name', 'username', 'email', 'password']));
+    $user = User::create([
+      'first_name' => ucfirst(request('first_name')),
+      'last_name' => ucfirst(request('last_name')),
+      'username' => request('username'),
+      'email' => request('email'),
+      'password' => bcrypt(request('password')),
+      'color' => $color
+    ]);
     // Sign them in
     auth()->login($user);
     // Redirect to home page
-    return redirect()->home();
+    return redirect('/members');
   }
 }

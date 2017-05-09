@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('username')->unique()->required();
             $table->string('email')->unique()->required();
             $table->string('password')->required();
+            $table->string('color');
             $table->rememberToken();
             $table->timestamps();
         });
