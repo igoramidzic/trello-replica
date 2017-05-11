@@ -1,15 +1,24 @@
-const { mix } = require('laravel-mix');
+const { mix } = require('laravel-mix')
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
- */
+mix.disableNotifications()
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix.js('resources/assets/js/all.js', 'public/js')
+   .sass('resources/assets/sass/main-content/index-navbar.sass', 'public/css')
+   .sass('resources/assets/sass/main-content/index-page.sass', 'public/css')
+   .sass('resources/assets/sass/main-content/main-items-content.sass', 'public/css')
+   .sass('resources/assets/sass/main-content/main-login-register.sass', 'public/css')
+   .sass('resources/assets/sass/main-content/main-navbar.sass', 'public/css')
+   .sass('resources/assets/sass/main-content/main.sass', 'public/css')
+   .sass('resources/assets/sass/main-content/user-item-content.sass', 'public/css')
+
+mix.styles([
+  'public/css/index-navbar.css',
+  'public/css/index-page.css',
+  'public/css/main-items-content.css',
+  'public/css/main-login-register.css',
+  'public/css/main-navbar.css',
+  'public/css/main.css',
+  'public/css/user-item-content.css'
+], 'public/css/all.css')
+
+mix.browserSync('localhost:8000')

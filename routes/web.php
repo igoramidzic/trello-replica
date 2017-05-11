@@ -1,25 +1,16 @@
 <?php
 
-// // Auth routes
-// Auth::routes();
-
 // GET Home
 Route::get('/', 'HomeController@index')->name('home');
 
-// // GET signup
-// Route::get('/signup', 'Auth\RegisterController@index');
-//
-// // GET login
-// Route::get('/login', 'Auth\LoginController@index');
-
 // GET Members INDEX
-Route::get('/members', 'MembersController@index')->name('members');
+Route::get('/members', 'MembersController@index');
 
 // GET Members SHOW
 Route::get('/members/{id}', 'MembersController@show');
 
 // GET Register
-Route::get('/signup', 'RegistrationController@create')->name('signup');
+Route::get('/signup', 'RegistrationController@create');
 
 // POST Register
 Route::post('/signup', 'RegistrationController@store');

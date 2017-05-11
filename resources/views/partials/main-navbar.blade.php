@@ -1,5 +1,5 @@
 <!-- Nav -->
-<nav class="navbar navbar-default">
+<nav class="main-navbar navbar navbar-default">
   <!-- Content container -->
   <div class="row container-fluid">
     <!-- Boards and Search Form -->

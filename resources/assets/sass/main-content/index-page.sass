@@ -1,0 +1,137 @@
+@import "../variables/_variables.sass"
+
+.main-index
+  height: 2000px
+  .main-hero
+    background-image: url('../img/hero-background-4.jpg')
+    background-position: center
+    background-size: cover
+    .background-dimmer
+      background: rgba(0, 0, 0, 0.4)
+      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 1%, rgba(0, 0, 0, 0.3) 60%, rgba(0,0,0,0.1) 100%)
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 1%, rgba(0, 0, 0, 0.3) 60%, rgba(0,0,0,0.1) 100%)
+      background: -o-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 1%, rgba(0, 0, 0, 0.3) 60%, rgba(0,0,0,0.1) 100%)
+      background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 1%, rgba(0, 0, 0, 0.3) 60%, rgba(0,0,0,0.1) 100%)
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 1%, rgba(0, 0, 0, 0.3) 60%, rgba(0,0,0,0.1) 100%)
+      text-align: center
+      padding-bottom: 50px
+      .hero-info
+        max-width: 800px
+        padding: 200px 0px 175px 0px
+        margin: 0 auto
+        transition: padding .25s
+      .header
+        color: #fff
+        font-size: 41px
+        margin: 0px 0px 30px 0px
+        font-weight: 500
+        transition: font-size .25s
+        text-shadow: 4px 0px 20px rgba(0, 0, 0, 0.8)
+      .description
+        color: #fff
+        font-size: 22px
+        padding: 0px 50px
+        font-weight: 300
+        margin: 0px 0px 30px 0px
+        transition: font-size .25s
+        transition: padding .25s
+        text-shadow: 4px 0px 20px rgba(0, 0, 0, .8)
+      .primary-btn
+        font-size: 13px
+        font-weight: 500
+      .scroll-down-alert
+        color: $extra-light-text-color
+        display: block
+        text-decoration: none
+        transition: color .25s
+        .fa-level-down
+          margin-left: 10px
+        &:hover
+          color: #fff
+
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) and (min-width : 992px)
+  .main-index
+    .main-hero
+      .background-dimmer
+        padding-bottom: 45px
+        .hero-info
+          padding: 180px 0px 155px 0px
+          max-width: 800px
+        .header
+          font-size: 39px
+        .description
+          font-size: 21px
+          padding: 0px 60px
+        .primary-btn
+          font-size: 13px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) and (min-width : 768px)
+  .main-index
+    .main-hero
+      .background-dimmer
+        padding-bottom: 40px
+        .hero-info
+          padding: 160px 0px 135px 0px
+          max-width: 800px
+        .header
+          font-size: 37px
+        .description
+          font-size: 20px
+          padding: 0px 60px
+        .primary-btn
+          font-size: 13px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) and (min-width : 480px)
+  .main-index
+    .main-hero
+      .background-dimmer
+        padding-bottom: 35px
+        .hero-info
+          padding: 140px 0px 115px 0px
+          max-width: 800px
+        .header
+          font-size: 35px
+        .description
+          font-size: 19px
+          padding: 0px 25px
+        .primary-btn
+          font-size: 13px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) and (min-width : 320px)
+  .main-index
+    .main-hero
+      .background-dimmer
+        padding-bottom: 30px
+        .hero-info
+          padding: 140px 0px 115px 0px
+          max-width: 800px
+        .header
+          font-size: 27px
+        .description
+          font-size: 18px
+          padding: 0px 10px
+        .primary-btn
+          font-size: 12px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+  .main-index
+    .main-hero
+      .background-dimmer
+        padding-bottom: 30px
+        .hero-info
+          padding: 130px 0px 105px 0px
+          max-width: 800px
+        .header
+          font-size: 27px
+        .description
+          font-size: 17px
+          padding: 0px 10px
+        .primary-btn
+          font-size: 12px

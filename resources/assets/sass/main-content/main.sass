@@ -11,7 +11,20 @@ body
 .content
   max-width: 1100px
 
-.main-index
+.primary-btn
+  background-color: $primary-color
+  padding: 10px 20px
+  border-radius: 3px
+  color: #fff
+  transition: all .25s
+  &:hover
+    color: #fff
+    background-color: darken($primary-color, 5%)
+    -webkit-box-shadow: 0px 3px 20px -2px $primary-color
+    -moz-box-shadow: 0px 3px 20px -2px $primary-color
+    box-shadow: 0px 3px 20px -2px $primary-color
+
+.main-content
   background: $primary-color
   background: -webkit-linear-gradient(135deg, $secondary-color 0%, $secondary-color 50%, $primary-color 50%, $primary-color 100%)
   background: -o-linear-gradient(135deg, $secondary-color 0%, $secondary-color 50%, $primary-color 50%, $primary-color 100%)
@@ -34,29 +47,29 @@ body
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) and (min-width : 992px)
-  .main-index
+  .main-content
     padding: 35px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) and (min-width : 768px)
-  .main-index
+  .main-content
     padding: 20px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) and (min-width : 480px)
-  .main-index
+  .main-content
     padding: 10px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) and (min-width : 320px)
-  .main-index
+  .main-content
     padding: 0px
     .wrapper
       border-radius: 0px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-  .main-index
+  .main-content
     padding: 0px
     .wrapper
       border-radius: 0px

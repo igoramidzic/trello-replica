@@ -1,62 +1,61 @@
 @import "../variables/_variables.sass"
 
-.main-index
-  .navbar
-    background-color: #fff
-    transition: all .25s
-    border: none
-    -webkit-box-shadow: 0px 10px 35px -10px rgba(0,0,0,0.75)
-    -moz-box-shadow: 0px 10px 35px -10px rgba(0,0,0,0.75)
-    box-shadow: 0px 10px 35px -20px rgba(0,0,0,0.5)
-    margin: 0px
-    .content-holder
-      .nav-item
-        display: inline-block
-        line-height: 70px
-        padding: 0px 25px
-        text-decoration: none
-      .nav-link
-        transition: all .25s
-        color: $light-text-color
-        &:hover
-          color: darken($light-text-color, 20%)
-      .page-title
-        color: $light-text-color
-        cursor: default
-      .emphasis
-        color: $primary-color
-        &:hover
-          color: darken($primary-color, 20%)
-    .left-container
-      padding-left: 0px
-    .center-container
-      text-align: center
+.main-navbar
+  background-color: #fff
+  transition: all .25s
+  border: none
+  -webkit-box-shadow: 0px 10px 35px -10px rgba(0,0,0,0.75)
+  -moz-box-shadow: 0px 10px 35px -10px rgba(0,0,0,0.75)
+  box-shadow: 0px 10px 35px -20px rgba(0,0,0,0.5)
+  margin: 0px
+  .content-holder
+    .nav-item
+      display: inline-block
+      line-height: 70px
+      padding: 0px 25px
+      text-decoration: none
+    .nav-link
+      transition: all .25s
+      color: $light-text-color
+      &:hover
+        color: darken($light-text-color, 20%)
+    .page-title
+      color: $light-text-color
+      cursor: default
+    .emphasis
+      color: $primary-color
+      &:hover
+        color: darken($primary-color, 20%)
+  .left-container
+    padding-left: 0px
+  .center-container
+    text-align: center
+    padding: 0px
+    .logo-link
+      display: inline-block
+      line-height: 70px
+      text-decoration: none
+      padding: 0px 15px
+    img
+      max-width: 55px
+  .right-container
+    padding-right: 0px
+    text-align: right
+    ul
+      margin: 0px
       padding: 0px
-      .logo-link
+      li
         display: inline-block
-        line-height: 70px
-        text-decoration: none
-        padding: 0px 15px
-      img
-        max-width: 55px
-    .right-container
-      padding-right: 0px
-      text-align: right
-      ul
-        margin: 0px
-        padding: 0px
-        li
-          display: inline-block
-          list-style: none
-      .profile
-        .profile-welcoming
-          &:hover
-            color: $primary-color
-          .welcome-message
-          .profile-img
-            max-width: 30px
-      // Changes color when dropdown is open
-      .dropdown.open .dropdown-toggle
-        color: $light-text-color
-        background-color: #fff
-        border-color: $light-text-color
+        list-style: none
+    .profile
+      .profile-welcoming
+        &:hover
+          color: $primary-color
+        .welcome-message
+        .profile-img
+          max-width: 30px
+    // Changes color when dropdown is open
+    .dropdown.open .dropdown-toggle
+      color: $light-text-color
+      background-color: #fff
+      border-color: $light-text-color

@@ -16,13 +16,8 @@
     <title>Trello | {{ $page }}</title>
   </head>
   <body>
-    <div class="main-index">
-      <div class="wrapper">
-        @include ('partials.main-navbar')
-        @yield ('main-content')
-      </div>
-    </div>
 
+    @yield ('main-content')
 
   </body>
   <!-- Scripts -->
@@ -31,4 +26,10 @@
   <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="js/all.js"></script>
+  <script type="text/javascript">
+    // AOS Init
+    AOS.init({
+      once: true
+    })
+  </script>
 </html>

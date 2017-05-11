@@ -2,6 +2,12 @@
 
 @section ('main-content')
 
-  @include ('partials.login-form')
+<div class="main-content">
+  <div class="wrapper">
+    @include ('partials.main-navbar')
+
+    @include ('partials.login-form')
+  </div>
+</div>
 
 @endsection
