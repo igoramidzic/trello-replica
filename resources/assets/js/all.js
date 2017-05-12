@@ -17,23 +17,25 @@ $(document).ready(function () {
     }
   })
 
-  // Change navbar css
+  // - - - - - - - - - - - - Change navbar css - - - - - - - - - - - - - - - - //
   function changeNavbar () {
-    // Height of the main hero
-    var heroHeight = $('.main-hero').outerHeight()
+    if ($(window).width() > 480) {
+      // Height of the main hero
+      var heroHeight = $('.main-hero').outerHeight()
 
-    // First scroll
-    if ($(window).scrollTop() > 100) {
-      $('.index-navbar').addClass('first-scroll-navbar')
-    } else if ($(window).scrollTop() < 50) {
-      $('.index-navbar').removeClass('first-scroll-navbar')
-    }
+      // First scroll
+      if ($(window).scrollTop() > 100) {
+        $('.index-navbar').addClass('first-scroll-navbar')
+      } else if ($(window).scrollTop() < 50) {
+        $('.index-navbar').removeClass('first-scroll-navbar')
+      }
 
-    // Second scroll
-    if ($(window).scrollTop() > heroHeight - 125) {
-      $('.index-navbar').addClass('second-scroll-navbar')
-    } else if ($(window).scrollTop() < heroHeight) {
-      $('.index-navbar').removeClass('second-scroll-navbar')
+      // Second scroll
+      if ($(window).scrollTop() > heroHeight - 125) {
+        $('.index-navbar').addClass('second-scroll-navbar')
+      } else if ($(window).scrollTop() < heroHeight) {
+        $('.index-navbar').removeClass('second-scroll-navbar')
+      }
     }
   }
   // Functions to run on scroll
@@ -46,4 +48,26 @@ $(document).ready(function () {
   })
   // On page loag
   changeNavbar()
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+  // - - - - - - - - - - - Remove navbar on mobile- - - - - - - - - - - - - - //
+  function removeFixedNavbar () {
+    if ($(window).width() < 480) {
+      $('.index-navbar').removeClass('navbar-fixed-top')
+      $('.index-navbar').addClass('navbar-default')
+      $('.index-navbar').addClass('mobile-navbar')
+    } else {
+      $('.index-navbar').addClass('navbar-fixed-top')
+      $('.index-navbar').removeClass('navbar-default')
+      $('.index-navbar').removeClass('mobile-navbar')
+    }
+  }
+  // Functions to run on resize
+  $(window).resize(function () {
+    removeFixedNavbar()
+  })
+  // On page loag
+  removeFixedNavbar()
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 })

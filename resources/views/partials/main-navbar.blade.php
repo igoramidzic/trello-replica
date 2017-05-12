@@ -36,10 +36,10 @@
               </a>
             </li>
           @else
-            <li class="profile">
+            <li class="profile hidden-xs">
               <a href="#" class="nav-item nav-link profile-welcoming">
-                <span class="welcome-message hidden-xs">Hello, {{ Auth::user()->first_name }}!</span>
-                <!-- <img class="profile-img img-rounded" src="img/profile-img.png" alt=""> -->
+                <img class="profile-img img-circle" src="img/profile-img-default.png" alt="">
+                <span class="welcome-message">Hello, {{ Auth::user()->first_name }}!</span>
               </a>
             </li>
             <li>

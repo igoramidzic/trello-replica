@@ -1,5 +1,5 @@
 <!-- Register Form -->
-<form class="login-register-form" method="POST" action="/signup">
+<form class="login-register-form" method="POST" action="/signup" novalidate>
 
   {{ csrf_field() }}
 
@@ -26,7 +26,7 @@
   <!-- Email -->
   <div class="input-group {{ $errors->has('email') ? ' has-error' : '' }}">
     <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-    <input type="text" class="form-control" placeholder="Email" autocorrect="off" autocapitalize="none" name="email" value="{{ old('email') }}">
+    <input type="email" class="form-control" placeholder="Email" autocorrect="off" autocapitalize="none" name="email" value="{{ old('email') }}">
   </div>
   <!-- Password -->
   <div class="input-group {{ $errors->has('password') ? ' has-error' : '' }}">
