@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Validator;
 use Illuminate\Http\Request;
 use App\User;
 
@@ -19,10 +20,9 @@ class RegistrationController extends Controller
     return view('auth/signup', compact('page'));
   }
 
-  public function store ()
+  public function store (Request $request)
   {
-    // Validate the form
-    $this->validate(request(), [
+    $validator = Validator::make($request->all(), [
       'first_name' => 'required',
       'last_name' => 'required',
       'username' => 'required|min:4|unique:users',
@@ -30,7 +30,11 @@ class RegistrationController extends Controller
       'password' => 'required|min:4'
     ]);
 
-    $color = rand(0, 255) . ", " . rand(0, 255) . ", " . rand(0,255);
+    if ($validator->fails()) {
+      return redirect('/signup')
+                     ->withErrors($validator)
+                     ->withInput();
+    }
 
     // Create and save the User
     $user = User::create([
@@ -39,7 +43,7 @@ class RegistrationController extends Controller
       'username' => request('username'),
       'email' => request('email'),
       'password' => bcrypt(request('password')),
-      'color' => $color
+      'color' => rand(0, 255) . ", " . rand(0, 255) . ", " . rand(0,255)
     ]);
     // Sign them in
     auth()->login($user);

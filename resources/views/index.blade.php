@@ -15,8 +15,10 @@
         <!-- Description -->
         <p class="description">Trello's boards, lists, and cards enable you to organize and
         prioritize your projects in a fun, flexible, and rewarding way.</p>
-        <!-- Signup link -->
-        <a class="btn primary-btn" href="/signup">SIGN UP FOR FREE</a>
+        <!-- Signup link - Desktop -->
+        <a class="btn primary-btn hidden-xs" href="#register-form">SIGN UP FOR FREE</a>
+        <!-- Mobile -->
+        <a class="btn primary-btn hidden-lg hidden-md hidden-sm" href="/signup">SIGN UP FOR FREE</a>
       </div>
       <!-- Scroll down alert -->
       <div class="scroll-down-alert-holder">
@@ -54,7 +56,7 @@
         <!-- Sign up button for mobile view -->
         <a class="mobile-signup-btn btn primary-btn hidden-lg hidden-md hidden-sm" href="/signup">SIGN UP FOR FREE</a>
         <!-- Register Form -->
-        <form data-aos="fade-up" data-aos-duration="1000" class="index-register-form hidden-xs" method="POST" action="/signup" novalidate>
+        <form data-aos="fade-up" data-aos-duration="1000" class="index-register-form hidden-xs" id="register-form" method="POST" action="/signup" novalidate>
           <h1 class="header">Sign up</h1>
 
           {{ csrf_field() }}
@@ -62,21 +64,21 @@
           <!-- Row1 -->
           <div class="row">
             <!-- First name -->
-            <div class="col-xs-4 small-input-holder {{ $errors->has('first_name') ? ' has-error' : '' }}">
+            <div class="col-xs-4 small-input-holder">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="First name" name="first_name" value="{{ old('first_name') }}">
+                <input type="text" class="form-control" placeholder="First name" name="first_name">
               </div>
             </div>
             <!-- Last name -->
-            <div class="col-xs-4 small-input-holder {{ $errors->has('last_name') ? ' has-error' : '' }}">
+            <div class="col-xs-4 small-input-holder">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Last name" name="last_name" value="{{ old('last_name') }}">
+                <input type="text" class="form-control" placeholder="Last name" name="last_name">
               </div>
             </div>
             <!-- Username -->
-            <div class="col-xs-4 small-input-holder {{ $errors->has('username') ? ' has-error' : '' }}">
+            <div class="col-xs-4 small-input-holder">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Username" autocorrect="off" autocapitalize="none" name="username" value="{{ old('username') }}">
+                <input type="text" class="form-control" placeholder="Username" autocorrect="off" autocapitalize="none" name="username">
               </div>
             </div>
           </div>
@@ -84,15 +86,15 @@
           <!-- Row2 -->
           <div class="row">
             <!-- Email -->
-            <div class="col-xs-6 small-input-holder {{ $errors->has('username') ? ' has-error' : '' }}">
-              <div class="input-group {{ $errors->has('email') ? ' has-error' : '' }}">
+            <div class="col-xs-6 small-input-holder">
+              <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                <input type="email" class="form-control" placeholder="Email" autocorrect="off" autocapitalize="none" name="email" value="{{ old('email') }}">
+                <input type="email" class="form-control" placeholder="Email" autocorrect="off" autocapitalize="none" name="email">
               </div>
             </div>
             <!-- Password -->
-            <div class="col-xs-6 small-input-holder {{ $errors->has('username') ? ' has-error' : '' }}">
-              <div class="input-group {{ $errors->has('password') ? ' has-error' : '' }}">
+            <div class="col-xs-6 small-input-holder">
+              <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-key"></i></span>
                 <input type="password" class="form-control" placeholder="password" name="password">
               </div>
@@ -106,7 +108,6 @@
           <div class="submit-button-holder">
             <input type="submit" class="btn primary-btn" value="SIGN UP">
           </div>
-          @include ('partials.errors')
         </form>
       </div>
     </div>
