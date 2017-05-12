@@ -6,8 +6,8 @@
     </div><!--
     --><div class="right-content num1 col-lg-6 col-md-6 col-sm-6 col-xs-8 vcenter">
       <ul class="links-list">
-        <li class="item"><a class="nav-link btn login" href="/signup">LOGIN</a></li><!--
-        --><li class="item"><a class="nav-link btn signup primary-btn" href="/signup">SIGNUP</a></li>
+        <li class="item"><a class="nav-link btn login" href="/login">LOGIN</a></li><!--
+        --><li class="item"><a class="nav-link btn signup primary-btn" href="/signup">SIGN UP</a></li>
       </ul>
     </div>
   </div>

@@ -51,15 +51,68 @@
             --><li class="item"><img src="img/company-logos/github.png" alt=""></li>
           </ul>
         </div>
-      </div>
-      <!-- Signup form -->
-      <div class="signup-form">
+        <!-- Sign up button for mobile view -->
+        <a class="mobile-signup-btn btn primary-btn hidden-lg hidden-md hidden-sm" href="/signup">SIGN UP FOR FREE</a>
+        <!-- Register Form -->
+        <form data-aos="fade-up" data-aos-duration="1000" class="index-register-form hidden-xs" method="POST" action="/signup" novalidate>
+          <h1 class="header">Sign up</h1>
 
+          {{ csrf_field() }}
+
+          <!-- Row1 -->
+          <div class="row">
+            <!-- First name -->
+            <div class="col-xs-4 small-input-holder {{ $errors->has('first_name') ? ' has-error' : '' }}">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="First name" name="first_name" value="{{ old('first_name') }}">
+              </div>
+            </div>
+            <!-- Last name -->
+            <div class="col-xs-4 small-input-holder {{ $errors->has('last_name') ? ' has-error' : '' }}">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Last name" name="last_name" value="{{ old('last_name') }}">
+              </div>
+            </div>
+            <!-- Username -->
+            <div class="col-xs-4 small-input-holder {{ $errors->has('username') ? ' has-error' : '' }}">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" autocorrect="off" autocapitalize="none" name="username" value="{{ old('username') }}">
+              </div>
+            </div>
+          </div>
+
+          <!-- Row2 -->
+          <div class="row">
+            <!-- Email -->
+            <div class="col-xs-6 small-input-holder {{ $errors->has('username') ? ' has-error' : '' }}">
+              <div class="input-group {{ $errors->has('email') ? ' has-error' : '' }}">
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                <input type="email" class="form-control" placeholder="Email" autocorrect="off" autocapitalize="none" name="email" value="{{ old('email') }}">
+              </div>
+            </div>
+            <!-- Password -->
+            <div class="col-xs-6 small-input-holder {{ $errors->has('username') ? ' has-error' : '' }}">
+              <div class="input-group {{ $errors->has('password') ? ' has-error' : '' }}">
+                <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                <input type="password" class="form-control" placeholder="password" name="password">
+              </div>
+            </div>
+          </div>
+
+          <!-- Terms of service -->
+          <p class="TOS">By clicking Sign up I agree to Trello's <a class="emphasis" href="#">Nothing</a></p>
+
+          <!-- Submit button -->
+          <div class="submit-button-holder">
+            <input type="submit" class="btn primary-btn" value="SIGN UP">
+          </div>
+          @include ('partials.errors')
+        </form>
       </div>
     </div>
     <!-- Footer part 2 -->
     <div class="footer-part-2">
-
+      <p class="info">Designed by <a target="_blank" href="https://dribbble.com/shots/3241803-Trello-Atlassian-Landing-Page">Serge Soskowiec</a> and Developed by <a target="_blank" href="http://www.igoramidzic.com/">Igor Amidzic</a></p>
     </div>
   </footer>
 </div>
