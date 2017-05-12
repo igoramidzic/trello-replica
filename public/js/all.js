@@ -1,1 +1,203 @@
-!function(n){function o(r){if(a[r])return a[r].exports;var e=a[r]={i:r,l:!1,exports:{}};return n[r].call(e.exports,e,e.exports,o),e.l=!0,e.exports}var a={};o.m=n,o.c=a,o.i=function(n){return n},o.d=function(n,a,r){o.o(n,a)||Object.defineProperty(n,a,{configurable:!1,enumerable:!0,get:r})},o.n=function(n){var a=n&&n.__esModule?function(){return n.default}:function(){return n};return o.d(a,"a",a),a},o.o=function(n,o){return Object.prototype.hasOwnProperty.call(n,o)},o.p="",o(o.s=8)}([function(n,o){$(document).ready(function(){function n(){if($(window).width()>480){var n=$(".main-hero").outerHeight();$(window).scrollTop()>100?$(".index-navbar").addClass("first-scroll-navbar"):$(window).scrollTop()<50&&$(".index-navbar").removeClass("first-scroll-navbar"),$(window).scrollTop()>n-125?$(".index-navbar").addClass("second-scroll-navbar"):$(window).scrollTop()<n&&$(".index-navbar").removeClass("second-scroll-navbar")}}function o(){$(window).width()<480?($(".index-navbar").removeClass("navbar-fixed-top"),$(".index-navbar").addClass("navbar-default"),$(".index-navbar").addClass("mobile-navbar")):($(".index-navbar").addClass("navbar-fixed-top"),$(".index-navbar").removeClass("navbar-default"),$(".index-navbar").removeClass("mobile-navbar"))}$("a").on("click",function(n){if(""!==this.hash){n.preventDefault();var o=this.hash;$("html, body").animate({scrollTop:$(o).offset().top},800,function(){})}}),$(window).scroll(function(){n()}),$(window).resize(function(){n()}),n(),$(window).resize(function(){o()}),o()})},function(n,o){},function(n,o){},function(n,o){},function(n,o){},function(n,o){},function(n,o){},function(n,o){},function(n,o,a){a(0),a(6),a(7),a(1),a(2),a(3),a(4),n.exports=a(5)}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
+
+/* global $*/
+
+$(document).ready(function () {
+  // Add smooth scrolling to all links
+  $('a').on('click', function (event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== '') {
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function () {});
+    }
+  });
+
+  // - - - - - - - - - - - - Change navbar css - - - - - - - - - - - - - - - - //
+  function changeNavbar() {
+    if ($(window).width() > 480) {
+      // Height of the main hero
+      var heroHeight = $('.main-hero').outerHeight();
+
+      // First scroll
+      if ($(window).scrollTop() > 100) {
+        $('.index-navbar').addClass('first-scroll-navbar');
+      } else if ($(window).scrollTop() < 50) {
+        $('.index-navbar').removeClass('first-scroll-navbar');
+      }
+
+      // Second scroll
+      if ($(window).scrollTop() > heroHeight - 125) {
+        $('.index-navbar').addClass('second-scroll-navbar');
+      } else if ($(window).scrollTop() < heroHeight) {
+        $('.index-navbar').removeClass('second-scroll-navbar');
+      }
+    }
+  }
+  // Functions to run on scroll
+  $(window).scroll(function () {
+    changeNavbar();
+  });
+  // Functions to run on resize
+  $(window).resize(function () {
+    changeNavbar();
+  });
+  // On page loag
+  changeNavbar();
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+  // - - - - - - - - - - - Remove navbar on mobile- - - - - - - - - - - - - - //
+  function removeFixedNavbar() {
+    if ($(window).width() < 480) {
+      $('.index-navbar').removeClass('navbar-fixed-top');
+      $('.index-navbar').addClass('navbar-default');
+      $('.index-navbar').addClass('mobile-navbar');
+    } else {
+      $('.index-navbar').addClass('navbar-fixed-top');
+      $('.index-navbar').removeClass('navbar-default');
+      $('.index-navbar').removeClass('mobile-navbar');
+    }
+  }
+  // Functions to run on resize
+  $(window).resize(function () {
+    removeFixedNavbar();
+  });
+  // On page loag
+  removeFixedNavbar();
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+});
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(0);
+__webpack_require__(6);
+__webpack_require__(7);
+__webpack_require__(1);
+__webpack_require__(2);
+__webpack_require__(3);
+__webpack_require__(4);
+module.exports = __webpack_require__(5);
+
+
+/***/ })
+/******/ ]);
