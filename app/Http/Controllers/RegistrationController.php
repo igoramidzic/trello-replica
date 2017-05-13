@@ -50,4 +50,9 @@ class RegistrationController extends Controller
     // Redirect to home page
     return redirect('/members');
   }
+
+  public function destroy ()
+  {
+
+  }
 }

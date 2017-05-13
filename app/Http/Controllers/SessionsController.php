@@ -24,7 +24,7 @@ class SessionsController extends Controller
     if (!auth()->attempt(request(['email', 'password']))) {
       return back()->withErrors([
         'message' => 'Email or password incorrect.'
-      ]);
+      ])->withInput();
     }
 
     return redirect('/members');
