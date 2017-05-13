@@ -21,13 +21,5 @@ class MembersController extends Controller
     $page = 'Members';
     return view('members', compact('users', 'page'));
   }
-
-  // Show one members
-  public function show ($id)
-  {
-    $user = DB::select("SELECT * FROM users WHERE id = $id");
-    $page = 'Member';
-    dd($user);
-    // return view('index', compact('users'));
-  }
+  
 }

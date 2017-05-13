@@ -27,7 +27,7 @@ class SessionsController extends Controller
       ])->withInput();
     }
 
-    return redirect('/members');
+    return redirect()->home();
   }
 
   public function destroy ()

@@ -22,6 +22,7 @@ class RegistrationController extends Controller
 
   public function store (Request $request)
   {
+    // Check input validation
     $validator = Validator::make($request->all(), [
       'first_name' => 'required',
       'last_name' => 'required',
@@ -30,6 +31,7 @@ class RegistrationController extends Controller
       'password' => 'required|min:4'
     ]);
 
+    // If validation fails, return to signup route with errors and input
     if ($validator->fails()) {
       return redirect('/signup')
                      ->withErrors($validator)
@@ -47,10 +49,11 @@ class RegistrationController extends Controller
     ]);
     // Sign them in
     auth()->login($user);
-    // Redirect to home page
-    return redirect('/members');
+    // Redirect to home controller (Boards page)
+    return redirect()->home();
   }
 
+  // Delete user
   public function destroy ()
   {
 

@@ -48,7 +48,7 @@
           </div>
         </div><!--
         --><div class="main-holder right-main-holder num1 col-sm-8 col-xs-12 vcenter">
-
+          <h1 class="coming-soon-header">Coming soon!</h1>
         </div>
     </div>
   </section>
@@ -99,7 +99,7 @@
           </div>
         </div><!--
         --><div class="main-holder right-main-holder num1 col-sm-8 col-xs-12 vcenter">
-
+          <h1 class="coming-soon-header">Coming soon!</h1>
         </div>
     </div>
   </section>

@@ -24,5 +24,8 @@ Route::post('/login', 'SessionsController@store');
 // POST Logout
 Route::post('/logout', 'SessionsController@destroy');
 
+// GET Boards
+Route::get('/{username}/{board}', 'BoardsController@index');
+
 // GET Profile
 Route::get('/{username}', 'ProfileController@index');

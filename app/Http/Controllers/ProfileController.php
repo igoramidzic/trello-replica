@@ -11,7 +11,13 @@ class ProfileController extends Controller
   public function index ($username)
   {
     $user = User::whereUsername($username)->first();
-    $page = $username;
+    // If no user by that username, throw 404 page
+    if (!$user) {
+      $page = "Error";
+      return view('page-not-found', compact('page'));
+    }
+
+    $page = 'Profile';
     return view('profile', compact('page', 'user'));
   }
 }
