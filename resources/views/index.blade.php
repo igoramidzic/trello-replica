@@ -28,8 +28,80 @@
   </section>
 
   <!-- Boards section -->
-  <section class="boards-section" id="boards-section">
+  <section class="info-section" id="boards-section">
+    <div class="row content">
+        <div class="main-holder left-main-holder col-sm-4 col-xs-12 vcenter">
+          <div class="holder">
+            <!-- Section icon -->
+            <div class="section-icon">
+              <img class="img-responsive item-logo" src="img/boards-icon.png" />
+            </div>
+            <!-- Header -->
+            <h1 class="header">Boards</h1>
+            <!-- Description -->
+            <p class="description">
+              Keep multiple projects organized with Boards. You can private or share any board
+              to keep your tasks personal or public.
+            </p>
+            <!-- Action button -->
+            <a class="action-btn btn primary-btn" href="#">FIND OUT MORE</a>
+          </div>
+        </div><!--
+        --><div class="main-holder right-main-holder num1 col-sm-8 col-xs-12 vcenter">
 
+        </div>
+    </div>
+  </section>
+
+  <!-- Details section -->
+  <section class="info-section" id="details-section">
+    <div class="row content">
+      <div class="main-holder right-main-holder col-sm-7 col-xs-12 vcenter">
+        <img class="img-responsive" src="img/details-section-img.png" alt="">
+      </div><!--
+      --><div class="main-holder left-main-holder col-sm-4 col-xs-12 vcenter">
+        <!-- Section icon -->
+        <div class="section-icon">
+          <img class="img-responsive item-logo" src="img/details-icon.png" />
+        </div>
+        <!-- Header -->
+        <h1 class="header">Details</h1>
+        <!-- Description -->
+        <p class="description">
+          Keep multiple projects organized using Boards. You can private or share any board
+          to keep your tasks personal or public.
+        </p>
+        <!-- Action button -->
+        <a class="action-btn btn primary-btn" href="#">FIND OUT MORE</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Caldendar section -->
+  <section class="info-section" id="caldendar-section">
+    <div class="row content">
+        <div class="main-holder left-main-holder col-sm-4 col-xs-12 vcenter">
+          <div class="holder">
+            <!-- Section icon -->
+            <div class="section-icon">
+              <img class="img-responsive item-logo" src="img/caldendar-icon.png" />
+            </div>
+            <!-- Header -->
+            <h1 class="header">Calendar</h1>
+            <!-- Description -->
+            <p class="description">
+              You can easily check your tasks throughout all the different boards you are
+              a member of! Switch between the monthly and weekly views to see what tasks
+              are waiting for you. You can also filter tasks by boards and members.
+            </p>
+            <!-- Action button -->
+            <a class="action-btn btn primary-btn" href="#">FIND OUT MORE</a>
+          </div>
+        </div><!--
+        --><div class="main-holder right-main-holder num1 col-sm-8 col-xs-12 vcenter">
+
+        </div>
+    </div>
   </section>
 
   <!-- Companies and register section -->
