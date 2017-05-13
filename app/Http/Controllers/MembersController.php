@@ -19,7 +19,7 @@ class MembersController extends Controller
     // Get all users
     $users = DB::select("SELECT * FROM users ORDER BY last_name ASC, first_name ASC, username ASC");
     $page = 'Members';
-    return view('members/index', compact('users', 'page'));
+    return view('members', compact('users', 'page'));
   }
 
   // Show one members

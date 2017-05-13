@@ -5,12 +5,12 @@
   <!-- Username -->
   <div class="input-group">
     <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-    <input type="email" class="form-control" placeholder="Email" autocorrect="off" autocapitalize="none" name="email" value="{{ old('email') }}" novalidate>
+    <input type="email" class="form-control" placeholder="Email" autocorrect="off" autocapitalize="none" name="email" value="{{ old('email') }}" {{ count($errors) && !old('email') ? 'autofocus' : '' }} novalidate>
   </div>
   <!-- Password -->
   <div class="input-group">
     <span class="input-group-addon"><i class="fa fa-key"></i></span>
-    <input type="password" class="form-control" placeholder="password" name="password">
+    <input type="password" class="form-control" placeholder="password" name="password" {{ old('email') ? 'autofocus' : '' }}>
   </div>
   @include ('partials.errors')
   <!-- Submit button -->

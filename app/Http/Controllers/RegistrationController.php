@@ -14,7 +14,7 @@ class RegistrationController extends Controller
     $this->middleware('guest');
   }
 
-  public function create ()
+  public function index ()
   {
     $page = 'Signup';
     return view('auth/signup', compact('page'));

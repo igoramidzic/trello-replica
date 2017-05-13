@@ -3,7 +3,7 @@
   <div class="form-group">
     <div class="alert alert-danger">
       @if (count($errors) > 2)
-        You must complete each field
+        You must fill each field
       @else
         @foreach ($errors->all() as $error)
           <p>{{ $error }}</p>

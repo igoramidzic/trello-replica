@@ -27,7 +27,7 @@
           <!-- User Links -->
           <div class="container-fluid linksHolder">
             <a class="col-xs-6" href="/members/{{ $user->id }}/tasks"><i class="icon fa fa-check-square-o"></i> TASKS</a>
-            <a class="col-xs-6" href="/members/{{ $user->id }}/profile"><i class="icon fa fa-user-o"></i> PROFILE</a>
+            <a class="col-xs-6" href="/{{ $user->username }}"><i class="icon fa fa-user-o"></i> PROFILE</a>
           </div>
         </div>
       </div>

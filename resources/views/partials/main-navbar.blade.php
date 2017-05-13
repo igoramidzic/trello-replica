@@ -37,7 +37,7 @@
             </li>
           @else
             <li class="profile hidden-xs">
-              <a href="#" class="nav-item nav-link profile-welcoming">
+              <a href="/{{ Auth::user()->username }}" class="nav-item nav-link profile-welcoming">
                 <img class="profile-img img-circle" src="img/profile-img-default.png" alt="">
                 <span class="welcome-message">Hello, {{ Auth::user()->first_name }}!</span>
               </a>

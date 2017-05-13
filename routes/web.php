@@ -10,16 +10,19 @@ Route::get('/members', 'MembersController@index');
 Route::get('/members/{id}', 'MembersController@show');
 
 // GET Register
-Route::get('/signup', 'RegistrationController@create');
+Route::get('/signup', 'RegistrationController@index');
 
 // POST Register
 Route::post('/signup', 'RegistrationController@store');
 
 // GET Login
-Route::get('/login', 'SessionsController@create')->name('login');
+Route::get('/login', 'SessionsController@index')->name('login');
 
 // POST Login
 Route::post('/login', 'SessionsController@store');
 
 // POST Logout
 Route::post('/logout', 'SessionsController@destroy');
+
+// GET Profile
+Route::get('/{username}', 'ProfileController@index');

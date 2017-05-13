@@ -12,7 +12,7 @@ class SessionsController extends Controller
     $this->middleware('guest')->except(['destroy']);
   }
 
-  public function create ()
+  public function index ()
   {
     $page = 'Login';
     return view('auth/login', compact('page'));
