@@ -33,7 +33,7 @@
     <span class="input-group-addon"><i class="fa fa-key"></i></span>
     <input type="password" class="form-control" placeholder="password" name="password">
   </div>
-  @include ('partials.errors')
+  @include ('partials.errors.form-errors')
   <!-- Submit button -->
   <div class="submit-button-holder">
     <input type="submit" class="submit-btn pull-right" value="SIGNUP">

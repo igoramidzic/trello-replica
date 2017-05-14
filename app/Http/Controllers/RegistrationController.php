@@ -50,7 +50,7 @@ class RegistrationController extends Controller
     // Sign them in
     auth()->login($user);
     // Redirect to home controller (Boards page)
-    return redirect()->home();
+    return redirect('/');
   }
 
   // Delete user

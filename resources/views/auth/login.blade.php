@@ -4,9 +4,9 @@
 
 <div class="main-content">
   <div class="wrapper">
-    @include ('partials.main-navbar')
+    @include ('partials.navbars.main-navbar')
 
-    @include ('partials.login-form')
+    @include ('partials.auth.login-form')
   </div>
 </div>
 

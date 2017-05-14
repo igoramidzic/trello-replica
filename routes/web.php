@@ -1,7 +1,10 @@
 <?php
 
 // GET Home
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index');
+
+// // GET Boards
+// Route::get('/', 'BoardsController@index');
 
 // GET Members INDEX
 Route::get('/members', 'MembersController@index');

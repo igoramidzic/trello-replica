@@ -18,8 +18,7 @@ class CreateTasksTable extends Migration
             $table->integer('board_id');
             $table->text('task');
             $table->boolean('is_completed')->default(false);
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamps();
         });
     }
 

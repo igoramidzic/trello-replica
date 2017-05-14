@@ -5,11 +5,9 @@
   <div class="main-content">
     <div class="wrapper">
       @include ('partials.navbars.main-navbar')
-
       <div class="items-content">
-        @include ('partials.users.user-item')
+        task1, task2
       </div>
-
     </div>
   </div>
 

@@ -1,5 +1,5 @@
 <!-- Login Form -->
-<form class="login-register-form" method="POST" action="{{ route('login') }}" novalidate>
+<form class="login-register-form" method="POST" action="/login" novalidate>
   {{ csrf_field() }}
 
   <!-- Username -->
@@ -12,7 +12,7 @@
     <span class="input-group-addon"><i class="fa fa-key"></i></span>
     <input type="password" class="form-control" placeholder="password" name="password" {{ old('email') ? 'autofocus' : '' }}>
   </div>
-  @include ('partials.errors')
+  @include ('partials.errors.form-errors')
   <!-- Submit button -->
   <div class="row submit-button-holder">
     <div class="col-xs-6">

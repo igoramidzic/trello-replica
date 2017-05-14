@@ -2,7 +2,7 @@
 
 @section ('main-content')
 
-@include ('partials.index-navbar')
+@include ('partials.navbars.index-navbar')
 
 <div class="main-index">
   <!-- Main hero -->

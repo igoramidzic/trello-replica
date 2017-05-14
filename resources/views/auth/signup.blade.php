@@ -5,9 +5,9 @@
   <div class="main-content">
     <div class="wrapper">
 
-      @include ('partials.main-navbar')
+      @include ('partials.navbars.main-navbar')
 
-      @include ('partials.register-form')
+      @include ('partials.auth.register-form')
 
     </div>
   </div>

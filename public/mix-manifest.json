@@ -1,5 +1,7 @@
 {
   "/js/all.js": "/js/all.js",
+  "/css/board-item-content.css": "/css/board-item-content.css",
+  "/css/create-new-board.css": "/css/create-new-board.css",
   "/css/index-navbar.css": "/css/index-navbar.css",
   "/css/index-page.css": "/css/index-page.css",
   "/css/main-items-content.css": "/css/main-items-content.css",

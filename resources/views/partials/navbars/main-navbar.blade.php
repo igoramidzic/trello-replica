@@ -26,7 +26,7 @@
           <!-- If user is logged in -->
           @if (Auth::guest())
             <li class="profile">
-              <a href="login" class="dropdown-toggle nav-item nav-link">
+              <a href="/login" class="dropdown-toggle nav-item nav-link">
                 Login
               </a>
             </li><!--

@@ -27,12 +27,12 @@ class SessionsController extends Controller
       ])->withInput();
     }
 
-    return redirect()->home();
+    return redirect('/');
   }
 
   public function destroy ()
   {
     auth()->logout();
-    return redirect()->home();
+    return redirect('/');
   }
 }

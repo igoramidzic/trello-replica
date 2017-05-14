@@ -22,8 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password')->required();
             $table->string('color');
             $table->rememberToken();
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamps();
         });
     }
 
