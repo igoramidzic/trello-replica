@@ -6,8 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Board extends Model
 {
-  public function tasks ()
-  {
-    return $this->hasMany(Task::class);
-  }
+  use Notifiable;
+
+  protected $fillable = [
+      'title'
+  ];
+
+  // public function tasks ()
+  // {
+  //   return $this->hasMany(Task::class);
+  // }
 }

@@ -5,35 +5,98 @@
     .create-new-board-item
       border: 2px dashed rgb(225, 225, 225)
       height: 194px
+      padding: 20px
       display: flex
       flex-direction: column
       justify-content: center
       .header
-        margin: 0
+        margin: 0px
         text-align: center
         font-weight: 400
         color: $light-text-color
+      .open-input
+        height: 45px !important
+        padding: 20px 5px 20px 15px !important
+        border: 1px solid $border-color !important
+      .title-field
+        transition: all .25s
+        margin: 15px 0px
+        height: 0
+        padding: 0px 5px 0px 15px
+        border: 0px solid transparent
+        box-shadow: none
+        font-size: 15px
+        font-weight: 300
+        border-radius: 2px
+        &::placeholder
+          color: $light-text-color
+        &:focus
+          border: 1px solid $primary-color !important
       .create-new-board-action-btn
         background-color: $primary-color
         position: absolute
-        bottom: -20px
-        right: 10%
-        width: 45px
-        height: 45px
+        bottom: -21.5px
+        right: 12%
+        width: 46px
+        height: 46px
         border-radius: 50%
+        border: none
         line-height: 70px
         text-align: center
-        display: flex
-        flex-direction: column
-        justify-content: center
         transition: all .25s
-        cursor: pointer
+        outline: none
         &:hover
           -webkit-box-shadow: 0px 3px 20px -2px $primary-color
           -moz-box-shadow: 0px 3px 20px -2px $primary-color
           box-shadow: 0px 3px 20px -2px $primary-color
-        .fa-plus
-          color: #fff
-          position: relative
-          top: 1px
-          font-size: 17px
+        .checkmark
+          font-size: 25px
+          width: .5em
+          height: 1.0em
+          border: solid #fff
+          border-width: 0 .2em .2em 0
+          position: absolute
+          top: 13px
+          right: 16px
+          margin-top: -.2em
+          -webkit-transform: rotate(45deg)
+          -moz-transform: rotate(45deg)
+          -o-transform: rotate(45deg)
+          transform: rotate(45deg)
+          background-color: #fff
+          position: absolute
+          height: 5px
+
+        .bar
+          position: absolute
+          background-color: #fff
+        .bar1
+          height: 3px
+          width: 19px
+          top: 22px
+          right: 13px
+        .bar2
+          height: 3px
+          width: 19px
+          top: 22px
+          right: 13px
+          transform: rotate(90deg)
+      .close-it
+        transform: rotate(135deg)
+        background-color: $danger-color
+        &:hover
+          -webkit-box-shadow: 0px -3px 20px -2px $danger-color
+          -moz-box-shadow: 0px -3px 20px -2px $danger-color
+          box-shadow: 0px -3px 20px -2px $danger-color
+        // .bar1
+        //   background-color: #fff
+        //   width: 13px
+        //   top: 25px
+        //   right: 20px
+        //   transform: rotate(45deg)
+        // .bar2
+        //   background-color: rgba(65, 117, 161, 0.68)
+        //   width: 25px
+        //   top: 19.1px
+        //   right: 5px
+        //   transform: rotate(135deg)

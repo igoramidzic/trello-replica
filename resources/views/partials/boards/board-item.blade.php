@@ -5,16 +5,16 @@
         <!-- User's Name Info -->
         <div class="header">
           <h4 class="title">{{ $board->title }}</h5>
-          <h6 class="created-at">Created {{ $board->created_at->toFormattedDateString() }}</h6>
+          <h6 class="created-at">Created {{ $board->created_at }}</h6>
         </div>
         <!-- Tasks stats -->
         <div class="container-fluid tasksHolder">
           <div class="col-xs-6">
-            <h1 class="taskCount">{{ rand(0,99) }}</h1>
+            <h1 class="taskCount">{{ $board->incomplete }}</h1>
             <p class="description">Open Tasks</p>
           </div>
           <div class="col-xs-6">
-            <h1 class="taskCount">{{ rand(0,99) }}</h1>
+            <h1 class="taskCount">{{ $board->completed }}</h1>
             <p class="description">Completed</p>
           </div>
         </div>
@@ -27,14 +27,21 @@
     </div>
   @endforeach
 
+
   <!-- Create a new board -->
   <div class="item-holder col-lg-3 col-md-4 col-sm-6">
-    <div class="create-new-board-item">
+    <form class="create-new-board-item">
+      <!-- Header -->
       <h4 class="header">Create new board</h4>
-      <div class="create-new-board-action-btn">
-        <i class="fa fa-plus"></i>
-      </div>
-    </div>
+      <input class="title-field" type="text" name="title" placeholder="Title" autocomplete="off">
+      <!-- Circle -->
+      <button type="button" class="create-new-board-action-btn">
+        <!-- Plus/checkmark elements -->
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <!-- <div class="checkmark"></div> -->
+      </button>
+    </form>
   </div>
 
 </div>

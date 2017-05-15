@@ -141,6 +141,24 @@ $(document).ready(function () {
   removeFixedNavbar();
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+  // - - - - - - - - - - - - - Create new board - - - - - - - - - - - - - - - //
+  var hasClassCloseIt = false;
+
+  $('.create-new-board-action-btn').click(function () {
+    if (hasClassCloseIt) {
+      $(this).removeClass('close-it');
+      $('.title-field').removeClass('open-input');
+      hasClassCloseIt = false;
+    } else {
+      $(this).addClass('close-it');
+      $('.title-field').addClass('open-input');
+      $('.title-field').focus();
+      hasClassCloseIt = true;
+    }
+  });
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 });
 
 /***/ }),
