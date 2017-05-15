@@ -30,5 +30,8 @@ Route::post('/logout', 'SessionsController@destroy');
 // GET Boards
 Route::get('/{username}/{board}', 'BoardsController@index');
 
+// POST Boards
+Route::post('/create-board', 'BoardsController@store');
+
 // GET Profile
 Route::get('/{username}', 'ProfileController@index');

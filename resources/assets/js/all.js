@@ -74,18 +74,41 @@ $(document).ready(function () {
   // - - - - - - - - - - - - - Create new board - - - - - - - - - - - - - - - //
   var hasClassCloseIt = false
 
+  // When user clicks + button, change to X button
   $('.create-new-board-action-btn').click(function () {
-    if (hasClassCloseIt) {
-      $(this).removeClass('close-it')
-      $('.title-field').removeClass('open-input')
-      hasClassCloseIt = false
-    } else {
-      $(this).addClass('close-it')
-      $('.title-field').addClass('open-input')
-      $('.title-field').focus()
-      hasClassCloseIt = true
+    if ($('.create-new-board-title-field').val().length == 0) {
+      if (hasClassCloseIt) {
+        $(this).removeClass('close-it')
+        $('.create-new-board-title-field').removeClass('open-input')
+        $('.create-new-board-title-field').blur()
+        $('.create-new-board-cancel').css('opacity', 0)
+        hasClassCloseIt = false
+      } else {
+        $(this).addClass('close-it')
+        $('.create-new-board-title-field').addClass('open-input')
+        $('.create-new-board-title-field').focus()
+        $('.create-new-board-cancel').css('opacity', 1)
+        hasClassCloseIt = true
+      }
     }
   })
+
+  // If user types something in text box, allow them to submit form
+  $('.create-new-board-title-field').on('input',function(e){
+    if ($(this).val().length > 0) {
+      $('.create-new-board-action-btn').removeClass('close-it')
+      $('.create-new-board-action-btn').addClass('submit-it')
+      $('.create-new-board-action-btn').attr('type', 'submit')
+      $('.create-new-board-cancel').css('opacity', 0)
+      $('.create-new-board-create').css('opacity', 1)
+    } else {
+      $('.create-new-board-action-btn').addClass('close-it')
+      $('.create-new-board-action-btn').removeClass('submit-it')
+      $('.create-new-board-action-btn').attr('type', 'button')
+      $('.create-new-board-cancel').css('opacity', 1)
+      $('.create-new-board-create').css('opacity', 0)
+    }
+  });
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 })

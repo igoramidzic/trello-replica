@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Board;
 use Illuminate\Http\Request;
 use Auth;
+use Validator;
 use App\User;
 
 class BoardsController extends Controller
@@ -29,7 +30,25 @@ class BoardsController extends Controller
 
   public function store(Request $request)
   {
-      //
+    // Check input validation
+    $validator = Validator::make($request->all(), [
+      'title' => 'required|min:1',
+    ]);
+
+    // If validation fails, return with errors and input
+    if ($validator->fails()) {
+      return redirect('/')
+                     ->withErrors($validator)
+                     ->withInput();
+    }
+
+    // Create and save the Board
+    $user = Board::create([
+      'user_id' => Auth::User()->id,
+      'title' => request('title')
+    ]);
+    // Redirect to home controller (Boards page)
+    return redirect('/');
   }
 
   public function show(Board $board)
