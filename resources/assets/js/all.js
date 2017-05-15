@@ -110,5 +110,13 @@ $(document).ready(function () {
     }
   });
 
+  // Prevent Enter key from submitting form if textbox is empty
+  $('.create-new-board-title-field').keydown(function(event){
+    if(event.keyCode == 13 && $('.create-new-board-title-field').val().length == 0) {
+      event.preventDefault()
+      return false;
+    }
+  });
+
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 })
