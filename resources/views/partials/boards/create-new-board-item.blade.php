@@ -1,6 +1,6 @@
 <!-- Create a new board -->
 <div class="item-holder col-lg-3 col-md-4 col-sm-6">
-  <form class="create-new-item" action="/create-board" method="POST">
+  <form class="new-board-form create-new-item" action="/create-board" method="POST">
     {{ csrf_field() }}
     <!-- Header -->
     <h4 class="header">Create new board</h4>

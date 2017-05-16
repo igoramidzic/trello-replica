@@ -6,29 +6,20 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateTasksTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('tasks', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('board_id');
-            $table->text('title');
-            $table->boolean('is_completed')->default(false);
-            $table->timestamps();
-        });
-    }
+  public function up()
+  {
+      Schema::create('tasks', function (Blueprint $table) {
+          $table->increments('id');
+          $table->integer('user_id')->required();
+          $table->integer('board_id')->required();
+          $table->text('title')->required();
+          $table->boolean('is_completed')->default(false);
+          $table->timestamps();
+      });
+  }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('tasks');
-    }
+  public function down()
+  {
+      Schema::dropIfExists('tasks');
+  }
 }

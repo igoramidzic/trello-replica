@@ -40,6 +40,7 @@
       .linksHolder
         padding: 0px
         .action-btn
+          cursor: pointer
           padding: 13px 0px
           text-align: center
           font-size: 12px
@@ -49,9 +50,15 @@
           transition: all .25s ease-in-out
           &:first-child
             border-right: 1px solid $border-color
-        .delete:hover
-          color: $danger-color
-          background-color: lighten($danger-color, 60%)
+        .board-delete-btn
+          -moz-user-select: -moz-none
+          -khtml-user-select: none
+          -webkit-user-select: none
+          -ms-user-select: none
+          user-select: none
+          &:hover
+            color: $danger-color
+            background-color: lighten($danger-color, 60%)
         .view
           color: $primary-color
           &:hover

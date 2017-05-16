@@ -1,0 +1,42 @@
+@import "../../variables/_variables.sass"
+
+.main-content
+  .items-content
+    .delete-item-form
+      position: absolute
+      background-color: lighten($danger-color, 15%)
+      top: 0
+      right: 15px
+      bottom: 0
+      left: 15px
+      transition: opacity .25s
+      text-align: center
+      z-index: -10
+      .title
+        margin: 20px 0px
+        color: #fff
+        font-weight: 300
+      .question
+        color: #fff
+        font-weight: 400
+        font-size: 18px
+        margin: 0
+        position: absolute
+        width: 100%
+        bottom: 70px
+      .btn-holder
+        position: absolute
+        bottom: 15px
+        width: 100%
+        margin-top: 30px
+        .primary-btn
+          outline: none
+          margin-right: 10px
+          &:hover
+            background-color: $primary-color
+        .danger-btn
+          outline: none
+          margin-left: 10px
+          background-color: #fff
+          color: $danger-color
+          margin: 0 auto 0 10px

@@ -3,6 +3,7 @@ const { mix } = require('laravel-mix')
 mix.disableNotifications()
 
 mix.js('resources/assets/js/all.js', 'public/js')
+   .sass('resources/assets/sass/main-content/small-partials/delete-item-form.sass', 'public/css')
    .sass('resources/assets/sass/main-content/tasks/task-item-content.sass', 'public/css')
    .sass('resources/assets/sass/main-content/boards/board-item-content.sass', 'public/css')
    .sass('resources/assets/sass/main-content/small-partials/create-new-item.sass', 'public/css')
@@ -15,6 +16,7 @@ mix.js('resources/assets/js/all.js', 'public/js')
    .sass('resources/assets/sass/main-content/users/user-item-content.sass', 'public/css')
 
 mix.styles([
+  'public/css/delete-item-form.css',
   'public/css/task-item-content.css',
   'public/css/board-item-content.css',
   'public/css/create-new-item.css',

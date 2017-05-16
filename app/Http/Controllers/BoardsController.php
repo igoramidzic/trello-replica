@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Auth;
 use Validator;
 use App\User;
+use App\Task;
 
 class BoardsController extends Controller
 {
@@ -21,11 +22,6 @@ class BoardsController extends Controller
       $page = 'Boards';
       $boards = User::find(Auth::User()->id)->boards;
       return view('boards', compact('page', 'boards'));
-  }
-
-  public function create()
-  {
-      //
   }
 
   public function store(Request $request)
@@ -51,23 +47,15 @@ class BoardsController extends Controller
     return redirect('/');
   }
 
-  public function show(Board $board)
-  {
-      //
-  }
-
-  public function edit(Board $board)
-  {
-      //
-  }
-
   public function update(Request $request, Board $board)
   {
       //
   }
 
-  public function destroy(Board $board)
+  public function destroy($id)
   {
-      //
+    Board::find($id)->where("user_id", Auth::User()->id)->where('id', $id)->delete();
+    Task::where("board_id", $id)->delete();
+    return back();
   }
 }

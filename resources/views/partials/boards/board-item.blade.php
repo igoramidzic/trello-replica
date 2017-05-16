@@ -4,7 +4,7 @@
         <!-- User's Name Info -->
         <div class="header">
           <h4 class="title">{{ $board->title }}</h5>
-          <h6 class="created-at">Created {{ $board->created_at }}</h6>
+          <h6 class="created-at">Created {{ $board->created_at->toFormattedDateString() }}</h6>
         </div>
         <!-- Tasks stats -->
         <div class="container-fluid tasksHolder">
@@ -19,9 +19,11 @@
         </div>
         <!-- User Links -->
         <div class="container-fluid linksHolder">
-          <a class="action-btn col-xs-6 delete">DELETE</a>
+          <a class="board-delete-btn action-btn col-xs-6">DELETE</a>
           <a class="action-btn col-xs-6 view" href="/b/{{ $board->id }}/{{ $board->title }}">VIEW</a>
         </div>
+        <!-- Delete form -->
+        @include ('partials.boards.delete-board-form')
       </div>
     </div>
   @endforeach

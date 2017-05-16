@@ -46,6 +46,7 @@ class TasksController extends Controller
 
     // Create and save the Board
     $user = Task::create([
+      'user_id' => Auth::User()->id,
       'board_id' => request('board_id'),
       'title' => request('title')
     ]);
@@ -68,8 +69,10 @@ class TasksController extends Controller
       //
   }
 
-  public function destroy(Task $task)
+  public function destroy($id)
   {
-      //
+
+    Task::find($id)->where('user_id', Auth::User()->id)->where('id', $id)->delete();
+    return back();
   }
 }

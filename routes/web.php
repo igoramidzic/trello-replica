@@ -27,11 +27,17 @@ Route::post('/logout', 'SessionsController@destroy');
 // POST Boards
 Route::post('/create-board', 'BoardsController@store');
 
+// DELETE Boards
+Route::delete('/board-delete/{id}', 'BoardsController@destroy');
+
 // GET Tasks
 Route::get('/b/{id}/{board}', 'TasksController@index');
 
 // POST Tasks
-Route::post('/b/create-task', 'TasksController@store');
+Route::post('/task-create', 'TasksController@store');
+
+// DELETE Tasks
+Route::delete('/task-delete/{id}', 'TasksController@destroy');
 
 // GET Profile
 Route::get('/{username}', 'ProfileController@index');
