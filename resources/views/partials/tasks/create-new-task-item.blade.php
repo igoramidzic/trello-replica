@@ -4,6 +4,7 @@
     {{ csrf_field() }}
     <!-- Header -->
     <h4 class="header">Create new task</h4>
+    <input type="text" name="board_id" value="{{ $board_id }}" hidden>
     <input class="create-new-item-input-field" type="text" name="title" placeholder="Title" autocomplete="off">
     <!-- Button info -->
     <h5 class="create-new-item-button-info create-new-item-cancel">Cancel</h5>

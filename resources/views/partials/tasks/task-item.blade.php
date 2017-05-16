@@ -1,25 +1,38 @@
-<div class="item-holder col-lg-3 col-md-4 col-sm-6">
-  <div class="board-item board-task-item">
-    <!-- User's Name Info -->
-    <div class="header">
-      <h4 class="title">Walk the dog</h5>
-      <h6 class="created-at">Created May 5, 2017</h6>
-    </div>
-    <!-- Tasks stats -->
-    <div class="container-fluid tasksHolder">
-      <div class="col-xs-6">
-        <h1 class="taskCount"></h1>
-        <p class="description">Open Tasks</p>
+@foreach ($tasks as $task)
+  <div class="item-holder col-lg-3 col-md-4 col-sm-6">
+    <div class="task-item board-task-item">
+      <!-- User's Name Info -->
+      <div class="header">
+        <h4 class="title">{{ $task->title }}</h5>
+        <h6 class="created-at">Created {{ $task->created_at }}</h6>
       </div>
-      <div class="col-xs-6">
-        <h1 class="taskCount"></h1>
-        <p class="description">Completed</p>
+      <!-- Tasks stats -->
+      <div class="container-fluid tasksHolder">
+
+        @if ($task->is_completed)
+        <p class="status complete">
+          Completed
+        </p>
+        @else
+        <p class="status incomplete">
+          Incomplete
+        </p>
+        @endif
       </div>
-    </div>
-    <!-- User Links -->
-    <div class="container-fluid linksHolder">
-      <a class="action-btn col-xs-6 delete">DELETE</a>
-      <a class="action-btn col-xs-6 view" href="/b/">VIEW</a>
+      <!-- User Links -->
+      <div class="container-fluid linksHolder">
+        <a class="action-btn col-xs-6 delete">DELETE</a>
+
+        @if ($task->is_completed)
+        <a class="action-btn col-xs-6 view done">
+          REVERT
+        </a>
+        @else
+        <a class="action-btn col-xs-6 view not-done">
+          FINISH
+        </a>
+        @endif
+      </div>
     </div>
   </div>
-</div>
+@endforeach

@@ -13,8 +13,8 @@ class Board extends Model
       'title', 'user_id'
   ];
 
-  // public function tasks ()
-  // {
-  //   return $this->hasMany(Task::class);
-  // }
+  public function tasks ()
+  {
+    return $this->hasMany(Task::class);
+  }
 }

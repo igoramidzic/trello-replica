@@ -10,6 +10,6 @@ class Task extends Model
   use Notifiable;
 
   protected $fillable = [
-      'title', 'board_id'
+      'board_id', 'title'
   ];
 }
