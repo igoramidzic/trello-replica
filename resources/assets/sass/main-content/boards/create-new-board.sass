@@ -2,9 +2,9 @@
 
 .main-content
   .items-content
-    .create-new-board-item
+    .create-new-item
       border: 2px dashed rgb(225, 225, 225)
-      height: 194px
+      min-height: 165px
       padding: 20px
       display: flex
       flex-direction: column
@@ -19,7 +19,7 @@
         padding: 20px 5px 20px 15px !important
         border: 1px solid $border-color !important
         margin: 15px 0px !important
-      .create-new-board-title-field
+      .create-new-item-input-field
         transition: all .25s
         margin: 0px
         height: 0
@@ -34,7 +34,7 @@
           color: $light-text-color
         &:focus
           border: 1px solid $primary-color !important
-      .create-new-board-button-info
+      .create-new-item-button-info
         opacity: 0
         text-align: center
         width: 50px
@@ -45,7 +45,7 @@
         color: $light-text-color
         font-weight: 300
         margin: 0px 0px 2px 0px
-      .create-new-board-action-btn
+      .create-new-item-action-btn
         background-color: $primary-color
         position: absolute
         bottom: -21.5px

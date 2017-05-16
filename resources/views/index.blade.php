@@ -34,7 +34,7 @@
           <div class="holder">
             <!-- Section icon -->
             <div class="section-icon">
-              <img class="img-responsive item-logo" src="img/boards-icon.png" />
+              <img class="img-responsive item-logo" src="{{ URL::asset('/img/boards-icon.png') }}" />
             </div>
             <!-- Header -->
             <h1 class="header">Boards</h1>

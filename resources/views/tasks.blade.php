@@ -6,7 +6,12 @@
     <div class="wrapper">
       @include ('partials.navbars.main-navbar')
       <div class="items-content">
-        task1, task2
+        <div class="row">
+          <!-- Task item -->
+          @include ('partials.tasks.task-item')
+          <!-- Create new task item -->
+          @include ('partials.tasks.create-new-task-item')
+        </div>
       </div>
     </div>
   </div>

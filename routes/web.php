@@ -3,9 +3,6 @@
 // GET Home
 Route::get('/', 'HomeController@index');
 
-// // GET Boards
-// Route::get('/', 'BoardsController@index');
-
 // GET Members INDEX
 Route::get('/members', 'MembersController@index');
 
@@ -27,11 +24,17 @@ Route::post('/login', 'SessionsController@store');
 // POST Logout
 Route::post('/logout', 'SessionsController@destroy');
 
-// GET Boards
-Route::get('/{username}/{board}', 'BoardsController@index');
+// // GET Boards (If logged in)
+// Route::get('/', 'BoardsController@index');
 
 // POST Boards
 Route::post('/create-board', 'BoardsController@store');
+
+// GET Tasks
+Route::get('/b/{id}/{board}', 'TasksController@index');
+
+// POST Tasks
+Route::post('/b/create-task', 'TasksController@store');
 
 // GET Profile
 Route::get('/{username}', 'ProfileController@index');

@@ -14,7 +14,7 @@
     <!-- Logo -->
     <div class="holder center-container col-lg-2 col-md-2 col-sm-2 col-xs-3">
       <div class="content-holder">
-        <a href="/" class="logo-link"><img src="img/trello-logo.png" alt=""></a>
+        <a href="/" class="logo-link"><img src="{{ URL::asset('/img/trello-logo.png') }}" alt=""></a>
       </div>
     </div>
 
@@ -38,7 +38,7 @@
           @else
             <li class="profile hidden-xs">
               <a href="/{{ Auth::user()->username }}" class="nav-item nav-link profile-welcoming">
-                <img class="profile-img img-circle" src="img/profile-img-default.png" alt="">
+                <img class="profile-img img-circle" src="{{ URL::asset('/img/profile-img-default.png') }}" alt="">
                 <span class="welcome-message">Hello, {{ Auth::user()->first_name }}!</span>
               </a>
             </li>

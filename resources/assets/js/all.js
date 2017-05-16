@@ -1,4 +1,4 @@
-/* global $*/
+/* global $ */
 
 $(document).ready(function () {
   // Add smooth scrolling to all links
@@ -72,51 +72,55 @@ $(document).ready(function () {
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
   // - - - - - - - - - - - - - Create new board - - - - - - - - - - - - - - - //
+
+  // Set height of item to height of board/task item
+  $('.create-new-item').css('height', $('.board-task-item').outerHeight())
+
   var hasClassCloseIt = false
 
   // When user clicks + button, change to X button
-  $('.create-new-board-action-btn').click(function () {
-    if ($('.create-new-board-title-field').val().length == 0) {
+  $('.create-new-item-action-btn').click(function () {
+    if ($('.create-new-item-input-field').val().length === 0) {
       if (hasClassCloseIt) {
         $(this).removeClass('close-it')
-        $('.create-new-board-title-field').removeClass('open-input')
-        $('.create-new-board-title-field').blur()
-        $('.create-new-board-cancel').css('opacity', 0)
+        $('.create-new-item-input-field').removeClass('open-input')
+        $('.create-new-item-input-field').blur()
+        $('.create-new-item-cancel').css('opacity', 0)
         hasClassCloseIt = false
       } else {
         $(this).addClass('close-it')
-        $('.create-new-board-title-field').addClass('open-input')
-        $('.create-new-board-title-field').focus()
-        $('.create-new-board-cancel').css('opacity', 1)
+        $('.create-new-item-input-field').addClass('open-input')
+        $('.create-new-item-input-field').focus()
+        $('.create-new-item-cancel').css('opacity', 1)
         hasClassCloseIt = true
       }
     }
   })
 
   // If user types something in text box, allow them to submit form
-  $('.create-new-board-title-field').on('input',function(e){
+  $('.create-new-item-input-field').on('input', function () {
     if ($(this).val().length > 0) {
-      $('.create-new-board-action-btn').removeClass('close-it')
-      $('.create-new-board-action-btn').addClass('submit-it')
-      $('.create-new-board-action-btn').attr('type', 'submit')
-      $('.create-new-board-cancel').css('opacity', 0)
-      $('.create-new-board-create').css('opacity', 1)
+      $('.create-new-item-action-btn').removeClass('close-it')
+      $('.create-new-item-action-btn').addClass('submit-it')
+      $('.create-new-item-action-btn').attr('type', 'submit')
+      $('.create-new-item-cancel').css('opacity', 0)
+      $('.create-new-item-create').css('opacity', 1)
     } else {
-      $('.create-new-board-action-btn').addClass('close-it')
-      $('.create-new-board-action-btn').removeClass('submit-it')
-      $('.create-new-board-action-btn').attr('type', 'button')
-      $('.create-new-board-cancel').css('opacity', 1)
-      $('.create-new-board-create').css('opacity', 0)
+      $('.create-new-item-action-btn').addClass('close-it')
+      $('.create-new-item-action-btn').removeClass('submit-it')
+      $('.create-new-item-action-btn').attr('type', 'button')
+      $('.create-new-item-cancel').css('opacity', 1)
+      $('.create-new-item-create').css('opacity', 0)
     }
-  });
+  })
 
   // Prevent Enter key from submitting form if textbox is empty
-  $('.create-new-board-title-field').keydown(function(event){
-    if(event.keyCode == 13 && $('.create-new-board-title-field').val().length == 0) {
+  $('.create-new-board-title-field').keydown(function (event) {
+    if (event.keyCode === 13 && $('.create-new-board-title-field').val().length === 0) {
       event.preventDefault()
-      return false;
+      return false
     }
-  });
+  })
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 })
