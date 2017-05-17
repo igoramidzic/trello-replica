@@ -64,9 +64,11 @@ class TasksController extends Controller
       //
   }
 
-  public function update(Request $request, Task $task)
+  public function update(Request $request, $id)
   {
-      //
+    Task::find($id)->where('user_id', Auth::User()->id)->where('id', $id)
+                  ->update(['is_completed' => request()->is_completed]);
+    return back();
   }
 
   public function destroy($id)

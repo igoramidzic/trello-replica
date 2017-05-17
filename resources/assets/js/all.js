@@ -125,7 +125,7 @@ $(document).ready(function () {
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
   // - - - - - - - - - - - - - - - Delete Item - - - - - - - - - - - - - - - - //
-  $('.task-delete-btn').click(function () {
+  $('.item-delete-btn').click(function () {
     $('.delete-item-form').css('z-index', '-10')
     $(this).parent().parent().find('.delete-item-form').css('z-index', '10')
   })

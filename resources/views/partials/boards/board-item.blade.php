@@ -19,7 +19,7 @@
         </div>
         <!-- User Links -->
         <div class="container-fluid linksHolder">
-          <a class="board-delete-btn action-btn col-xs-6">DELETE</a>
+          <a class="item-delete-btn board-delete-btn action-btn col-xs-6">DELETE</a>
           <a class="action-btn col-xs-6 view" href="/b/{{ $board->id }}/{{ $board->title }}">VIEW</a>
         </div>
         <!-- Delete form -->

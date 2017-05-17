@@ -36,6 +36,9 @@ Route::get('/b/{id}/{board}', 'TasksController@index');
 // POST Tasks
 Route::post('/task-create', 'TasksController@store');
 
+// UPDATE Tasks
+Route::patch('/task-update/{id}', 'TasksController@update');
+
 // DELETE Tasks
 Route::delete('/task-delete/{id}', 'TasksController@destroy');
 

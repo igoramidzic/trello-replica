@@ -25,17 +25,24 @@
       </div>
       <!-- User Links -->
       <div class="container-fluid linksHolder">
-        <a class="task-delete-btn action-btn col-xs-6 delete">DELETE</a>
+        <button class="item-delete-btn task-delete-btn action-btn col-xs-6 delete">DELETE</button>
 
-        @if ($task->is_completed)
-        <a class="action-btn col-xs-6 view done">
-          REVERT
-        </a>
-        @else
-        <a class="action-btn col-xs-6 view not-done">
-          FINISH
-        </a>
-        @endif
+        <form action="/task-update/{{ $task->id }}" method="post">
+          {{ method_field('PATCH') }}
+          {{ csrf_field() }}
+
+          @if ($task->is_completed)
+          <input type="text" name="is_completed" value="0" hidden>
+          <button class="action-btn col-xs-6 view done">
+            REVERT
+          </button>
+          @else
+          <input type="text" name="is_completed" value="1" hidden>
+          <button class="action-btn col-xs-6 view not-done">
+            FINISH
+          </button>
+          @endif
+        </form>
       </div>
 
       @include ('partials.tasks.delete-task-form')
