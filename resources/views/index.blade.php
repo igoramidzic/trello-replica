@@ -30,7 +30,7 @@
   <!-- Boards section -->
   <section class="info-section" id="boards-section">
     <div class="row content">
-        <div class="main-holder left-main-holder col-sm-4 col-xs-12 vcenter">
+        <div class="main-holder description-holder col-sm-4 col-xs-12 vcenter">
           <div class="holder">
             <!-- Section icon -->
             <div class="section-icon">
@@ -44,11 +44,11 @@
               to keep your tasks personal or public.
             </p>
             <!-- Action button -->
-            <a class="action-btn btn primary-btn" href="#">FIND OUT MORE</a>
+            <a class="action-btn btn primary-btn" href="/signup">FIND OUT MORE</a>
           </div>
         </div><!--
-        --><div class="main-holder right-main-holder num1 col-sm-8 col-xs-12 vcenter">
-          <h1 class="coming-soon-header">Coming soon!</h1>
+        --><div class="main-holder col-sm-8 col-xs-12 vcenter">
+          <img class="img-rounded img-responsive" src="{{ URL::asset('/img/boards-page.png') }}" alt="">
         </div>
     </div>
   </section>
@@ -56,10 +56,10 @@
   <!-- Details section -->
   <section class="info-section" id="details-section">
     <div class="row content">
-      <div class="main-holder right-main-holder col-sm-7 col-xs-12 vcenter">
+      <div class="main-holder col-sm-7 col-xs-12 hidden-xs vcenter">
         <img class="img-responsive" src="img/details-section-img.png" alt="">
       </div><!--
-      --><div class="main-holder left-main-holder col-sm-4 col-xs-12 vcenter">
+      --><div class="main-holder description-holder col-sm-4 col-xs-12 vcenter">
         <!-- Section icon -->
         <div class="section-icon">
           <img class="img-responsive item-logo" src="img/details-icon.png" />
@@ -72,7 +72,10 @@
           to keep your tasks personal or public.
         </p>
         <!-- Action button -->
-        <a class="action-btn btn primary-btn" href="#">FIND OUT MORE</a>
+        <a class="action-btn btn primary-btn" href="/signup">FIND OUT MORE</a>
+      </div><!--
+      --><div class="main-holder col-sm-7 col-xs-12 hidden-lg hidden-md hidden-sm vcenter">
+          <img class="img-responsive" src="img/details-section-img.png" alt="">
       </div>
     </div>
   </section>
@@ -80,26 +83,26 @@
   <!-- Caldendar section -->
   <section class="info-section" id="caldendar-section">
     <div class="row content">
-        <div class="main-holder left-main-holder col-sm-4 col-xs-12 vcenter">
+        <div class="main-holder description-holder col-sm-4 col-xs-12 vcenter">
           <div class="holder">
             <!-- Section icon -->
             <div class="section-icon">
-              <img class="img-responsive item-logo" src="img/caldendar-icon.png" />
+              <img class="img-responsive item-logo" src="{{ URL::asset('/img/boards-icon.png') }}" />
             </div>
             <!-- Header -->
-            <h1 class="header">Calendar</h1>
+            <h1 class="header">Tasks</h1>
             <!-- Description -->
             <p class="description">
-              You can easily check your tasks throughout all the different boards you are
-              a member of! Switch between the monthly and weekly views to see what tasks
-              are waiting for you. You can also filter tasks by boards and members.
+              You can easily check your tasks throughout all the different boards you have.
+              You can mark tasks as complete, delete them, or revert back incase you mistakenly
+              finished the task!
             </p>
             <!-- Action button -->
-            <a class="action-btn btn primary-btn" href="#">FIND OUT MORE</a>
+            <a class="action-btn btn primary-btn" href="/signup">FIND OUT MORE</a>
           </div>
         </div><!--
-        --><div class="main-holder right-main-holder num1 col-sm-8 col-xs-12 vcenter">
-          <h1 class="coming-soon-header">Coming soon!</h1>
+        --><div class="main-holder col-sm-8 col-xs-12 vcenter">
+          <img class="img-rounded img-responsive" src="{{ URL::asset('/img/tasks-page.png') }}" alt="">
         </div>
     </div>
   </section>

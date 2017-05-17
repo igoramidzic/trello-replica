@@ -36,6 +36,9 @@ $(document).ready(function () {
       } else if ($(window).scrollTop() < heroHeight) {
         $('.index-navbar').removeClass('second-scroll-navbar')
       }
+    } else {
+      $('.index-navbar').removeClass('first-scroll-navbar')
+      $('.index-navbar').removeClass('second-scroll-navbar')
     }
   }
   // Functions to run on scroll
@@ -70,6 +73,16 @@ $(document).ready(function () {
   removeFixedNavbar()
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+  // - - - - - - - - Change index page's row order on mobile - - - - - - - - - //
+  // function addPullRightClass () {
+  //
+  // }
+
+  // Functions to run on resize
+  $(window).resize(function () {
+    removeFixedNavbar()
+  })
 
   // - - - - - - - - - - - - - Create new board - - - - - - - - - - - - - - - //
 
